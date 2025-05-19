@@ -1,0 +1,5 @@
+﻿#id=startTab
+#comment=
+#component=tab
+width1080width_unit1height1920height_unit1border0tabitem_hidden1tabitem_font맑은 고딕,9,0,0,0,0tabitem_selfont맑은 고딕,9,0,0,0,0titlebar_font맑은 고딕,9,1,0,0,0on_itemcreateeventfunc:TB_Start_on_itemcreate(objInst, itemindex)
+

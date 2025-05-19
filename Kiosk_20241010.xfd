@@ -1,0 +1,10 @@
+﻿##############################
+##### xFrame@DevStudio Project File #####
+### copyright by (c) softbase corporation ###
+##############################
+# Do NOT EDIT OR DELETE THIS FILE.
+
+[PROJECT]
+PATH = C:\AppRoot\xFrame5_egov\workspace\xframe5_egov3.6\src\main\webapp\project
+ID = Kiosk_20241010
+NAME = 키오스크2

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<map_list>
+	<map>
+		<screen version="2.0" scriptcode="java" title="test" screenid="test0002" last_update_date="2025-01-09 17:08:28" width="1920" width_type="0" height="1080" height_type="0" canvas_width="2120" canvas_height="1280" on_load="eventfunc:screen_on_load()" funclist="screen_on_load,fn_trancomplete,btn_Menu_on_mouseup,createPanelsFromDataset"/>
+		<xlinkdataset id="DS_MENU" desc="" columns="menuId:::&quot;AM&#x0A;CL&#x0A;CM&#x0A;&quot;:;menuName:::&quot;아메리카노&#x0A;카페라떼&#x0A;카페모카&#x0A;&quot;:;cost:::&quot;1500&#x0A;1500&#x0A;2500&#x0A;&quot;:;url:::&quot;/BIZ/102/04/drink_1.png&#x0A;/BIZ/102/04/drink_2.png&#x0A;/BIZ/102/04/drink_3.png&#x0A;&quot;:"/>
+		<xlinkdataset id="DS_ORDER" desc="" columns="menuName::::;count::::"/>
+		<tab_order order_option="0" order_info="1247"/>
+		<image control_id="957" name="img_1" autosize="0" x="149" y="18" right="1721" bottom="969" width="50" height="93" transparent="1" border="0" padding="0,0,0,0"/>
+		<image control_id="960" name="img_2" autosize="0" x="521" y="18" right="1349" bottom="969" width="50" height="93" transparent="1" border="0" padding="0,0,0,0"/>
+		<image control_id="963" name="img_3" autosize="0" x="887" y="18" right="983" bottom="969" width="50" height="93" transparent="1" border="0" padding="0,0,0,0"/>
+		<listview control_id="1236" name="list_Menu" x="0" y="0" right="1056" bottom="800" width="864" height="280" back_color="00233347" transparent="0" border="0" border_color="00233347" column_count="0" item_dir="1" item_height="270" item_width="288" item_samplerows="1" item_backcolor="00233347" item_bordercolor="00233347" item_dividerowcount="1" item_dividecolor="00233347" item_selbackcolor="00233347" item_hoverbackcolor="00EBEBEB" link_data="DS_ORDER">
+			<image control_id="1237" autosize="0" x="0" y="0" right="36" bottom="10" width="252" height="270" transparent="0" border="0" border_color="00233347" border_radius="15" back_image="/BIZ/102/04/list_252-270_line_o.png" back_imagesize="1" padding="0,0,0,0"/>
+			<image control_id="1238" autosize="0" x="102" y="8" right="136" bottom="176" width="50" height="96" transparent="1" border="0" back_imagesize="1" back_imagehorzalign="1" padding="0,0,0,0" link_data="DS_ORDER:url"/>
+			<text control_id="1234" autosize="0" x="6" y="114" right="42" bottom="112" width="240" height="54" custom_class="TX_104_WhiteTxt" text="아메리카노" font="Noto Sans CJK KR Medium,31.5,500,0,0,0" transparent="1" horz_align="1" link_data="DS_ORDER:menuName" version="1.1"/>
+			<text control_id="1235" autosize="0" x="6" y="162" right="42" bottom="64" width="240" height="54" custom_class="TX_104_WhiteTxt" text="차갑게/중간컵" font="Noto Sans CJK KR Medium,31.5,500,0,0,0" transparent="1" horz_align="1" letter_spacing="-2px" link_data="DS_ORDER:TemSize" version="1.1"/>
+			<text control_id="1239" autosize="0" x="96" y="210" right="172" bottom="16" width="20" height="54" custom_class="TX_104_Yellow" text="1" font="Noto Sans CJK KR Medium,31.5,500,0,0,0" fore_color="0000569D" transparent="1" horz_align="1" link_data="DS_ORDER:count" version="1.1"/>
+			<line control_id="1007" x1="10" y1="108" x2="240" y2="108" right="48" bottom="172" line_width="1" line_color="00D2D2D2"/>
+			<text control_id="1245" autosize="0" x="10" y="108" right="43" bottom="170" width="235" height="2" text="" font="맑은 고딕,9,0,0,0,0" back_color="00D2D2D2" version="1.1"/>
+			<text control_id="1246" autosize="0" x="116" y="210" right="126" bottom="16" width="46" height="54" custom_class="TX_104_Yellow" text="개" font="Noto Sans CJK KR Medium,31.5,500,0,0,0" fore_color="0000569D" transparent="1" horz_align="1" version="1.1"/>
+		</listview>
+		<panel control_id="1247" name="pnl_Menu" semantic_tag="0" x="137" y="318" right="919" bottom="472" width="864" height="290" back_color="00233347" border="0" vertscrollbar_style="0" horzscrollbar_style="0" title_font="맑은 고딕,9,0,0,0,0"></panel>
+	</map>
+</map_list>

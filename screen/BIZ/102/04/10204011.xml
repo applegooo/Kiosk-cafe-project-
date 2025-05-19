@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<map_list>
+	<map>
+		<screen version="2.0" scriptcode="java" title="무인카페_제조완료" directory="/BIZ/102/04/" screenid="10204011" last_update_date="2025-01-20 16:30:06" width="1080" width_type="0" height="1920" height_type="0" canvas_height="2120" funclist="time_on_time,btn_Call_on_mouseup,btn_Acc_on_mouseup"/>
+		<panel control_id="0" semantic_tag="0" x="0" y="0" right="0" bottom="0" width="1080" height="1920" custom_class="PN_101_back" back_color="00F8F8F8" border="0" title_font="맑은 고딕,9,0,0,0,0">
+			<tab_order order_option="0" order_info="6,1233,7"/>
+			<panel control_id="7" semantic_tag="0" x="0" y="1805" right="0" bottom="0" width="1080" height="115" custom_class="PN_101_back" border="0" boxshadow_type="1" title_font="맑은 고딕,9,0,0,0,0">
+				<pushbutton control_id="230" name="btn_Acc" x="866" y="18" right="14" bottom="17" width="200" height="80" style_class="0" custom_class="PB_101_access" text="접근성" font="Noto Sans KR,31.5,1,0,0,0" fore_color="00FFFFFF" transparent="1" border="4" border_color="00E2E2E2" border_radius="44" image_normal="/BIZ/101/01/PUB/lowsc_bt.png" image_down="/BIZ/101/01/PUB/lowsc_bt_o.png" box_shadow_effect="0" horz_align="0" line_height="62" text_margin="63,0,0,0" text_wordellipsis="0" hover_font="맑은 고딕,9,0,0,0,0" down_color_use="2" down_forecolor="00F8F8F8" letter_spacing="-2.1px" version="1.1" on_mouseup="eventfunc:btn_Acc_on_mouseup(objInst)"/>
+			</panel>
+			<panel control_id="6" semantic_tag="0" x="0" y="0" right="0" bottom="1840" width="1080" height="80" custom_class="PN_101_back" border="0" vertscrollbar_style="0" horzscrollbar_style="0" boxshadow_type="1" title_font="맑은 고딕,9,0,0,0,0">
+				<tab_order order_option="0" order_info="214,193,888"/>
+				<pushbutton control_id="193" name="btn_Call" x="866" y="5" right="14" bottom="5" width="200" height="70" style_class="0" custom_class="PB_101_call" text="직원호출" font="Noto Sans KR Medium,31.5,500,0,0,0" fore_color="00FFFFFF" back_color="00FBFBFB" border="4" border_color="000000D1" border_radius="35" image_normal="/BIZ/101/01/PUB/call_bt_R.png" image_down="/BIZ/101/01/PUB/call_bt_R_o.png" image_vert_align="1" box_shadow_effect="0" horz_align="0" line_height="62" text_margin="39,0,0,0" hover_font="맑은 고딕,9,0,0,0,0" down_color_use="3" down_backcolor="0011119C" letter_spacing="-2.1px" version="1.1" on_mouseup="eventfunc:btn_Call_on_mouseup(objInst)"/>
+				<pushbutton control_id="214" name="btn_Flag" x="758" y="5" right="252" bottom="5" width="70" height="70" style_class="0" custom_class="PB_101_selLanguage" text="" font="Noto Sans CJK KR,32,0,0,0,0" fore_color="000A0A0A" transparent="1" border="4" border_color="00E2E2E2" border_radius="44" image_normal="/BIZ/101/01/PUB/language_lound_bt.png" image_down="/BIZ/101/01/PUB/language_lound_kr_bt_o.png" box_shadow_effect="0" horz_align="2" line_height="62" text_margin="" text_wordellipsis="0" hover_font="맑은 고딕,9,0,0,0,0" down_color_use="2" down_forecolor="00F8F8F8" version="1.1"/>
+				<pushbutton control_id="888" x="416" y="25" right="416" bottom="23" width="248" height="32" style_class="0" text="" font="맑은 고딕,9,0,0,0,0" transparent="1" border="4" image_normal="/BIZ/102/04/logo_cafe.png" imagesize="1" box_shadow_effect="0" hover_font="맑은 고딕,9,0,0,0,0" version="1.1"/>
+			</panel>
+			<text control_id="985" autosize="0" x="0" y="609" right="0" bottom="1222" width="1080" height="89" custom_class="TX_104_Yellow" text="이용해주셔서 감사합니다" font="Noto Sans CJK KR Bold,45,1,0,0,0" fore_color="0000579E" back_color="00F8F8F8" transparent="1" back_imagehorzalign="1" horz_align="1" version="1.1"/>
+			<text control_id="1204" autosize="0" x="0" y="684" right="0" bottom="1147" width="1080" height="89" custom_class="TX_104_WhiteTxt" text="잊으신 물건 없이 안녕히 가세요" font="Noto Sans CJK KR Bold,45,1,0,0,0" back_color="00F8F8F8" transparent="1" back_imagehorzalign="1" horz_align="1" version="1.1"/>
+			<panel control_id="1233" semantic_tag="0" x="180" y="1053" right="180" bottom="617" width="720" height="250" back_color="00F8F8F8" transparent="1" back_image="/BIZ/102/04/logo_food_grey.png" border="0" title_font="맑은 고딕,9,0,0,0,0"></panel>
+			<text control_id="1234" name="time_txt" x="485" y="1444" right="480" bottom="234" width="115" height="242" custom_class="TX_104_WhiteTxt" text="5" font="Noto Sans CJK KR Regular,150,0,0,0,0" back_color="00F8F8F8" transparent="1" version="1.1"/>
+		</panel>
+		<hidden_screen>
+			<timer control_id="1235" name="time" x="0" y="1920" width="28" height="28" enable="0" on_time="eventfunc:time_on_time(objInst)"/>
+		</hidden_screen>
+	</map>
+</map_list>
