@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <map_list>
 	<map>
-		<screen version="2.0" scriptcode="java" title="시작화면" directory="/SYS/" screenid="StartMain" width="1080" height="1920" last_update_date="2025-05-19 17:03:43" on_load="eventfunc:screen_on_load()" funclist="screen_on_load,TB_Start_on_itemcreate"/>
+		<screen version="2.0" scriptcode="java" title="시작화면" directory="/SYS/" screenid="StartMain" width="1080" height="1920" last_update_date="2025-05-19 17:14:05" on_load="eventfunc:screen_on_load()" funclist="screen_on_load,TB_Start_on_itemcreate"/>
 		<tab control_id="2" name="TB_Start" x="0" y="0" width="1080" height="1920" border="0" tabitem_font="맑은 고딕,9,0,0,0,0" tabitem_selfont="맑은 고딕,9,0,0,0,0" tabitem_hidden="1" titlebar_font="맑은 고딕,9,1,0,0,0" on_itemcreate="eventfunc:TB_Start_on_itemcreate(objInst, itemindex)">
 		</tab>
 	</map>
