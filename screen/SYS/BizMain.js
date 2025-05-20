@@ -10,20 +10,9 @@
 주문
 4. 무인카페
 5. 음식점
-6. 푸드코드
-7. 테이블오더(10.2인치용)
 
-발권
-8. 셔틀버스
-9. 시외버스 or 고속버스
-10. 셀프체크인(숙박)
-11. 중고휴대폰판매기
-12. 박물관
-13. 스포츠
-안내
-14. 위치정보시스템
-15. 길안내로봇
-16. 병원진료예약키오스크
+발권 
+6.무인발권기
 */
 //= 유통
 let JsonMenu = {
@@ -184,30 +173,6 @@ let JsonMenu = {
 					,{scrId : "10205014",scrNm : "[저]마무리인사(2)"}
 				]
 			}
-			,{
-				middleMenuNm  : "기",
-				middleMenuUrl : "0",
-				subMenuArray  : [
-					{scrId : "10306001",scrNm : "무인발권기_사용시작안내"}
-					,{scrId : "10306002",scrNm : "무인발권기_도착지"}					
-				]
-				,subMenuArrayLP : [
-					{scrId : "10106001",scrNm : "[저]무인주차정산기_사용시작안내"}
-					,{scrId : "10106002",scrNm : "[저]무인주차정산기_기본선택(입력)"}
-				]
-			}
-			,{
-				middleMenuNm  : "테이블오더",
-				middleMenuUrl : "07",
-				subMenuArray  : [
-					{scrId : "10107001",scrNm : "무인주차정산기_사용시작안내"}
-					,{scrId : "10107002",scrNm : "무인주차정산기_기본선택(입력)"}
-				]
-				,subMenuArrayLP : [
-					{scrId : "10107001",scrNm : "[저]무인주차정산기_사용시작안내"}
-					,{scrId : "10107002",scrNm : "[저]무인주차정산기_기본선택(입력)"}
-				]
-			}
 		]
 	},Ticket :  {
 		id : "103",
@@ -237,55 +202,9 @@ let JsonMenu = {
 					{scrId : "10308001",scrNm : "[저]무인민원발급기_1"}
 					,{scrId : "10308002",scrNm : "[저]무인민원발급기_2"}
 				]
-			}, {
-				middleMenuNm  : "시외버스OR고속버스",
-				middleMenuUrl : "09",
-				subMenuArray  : [
-					{scrId : "10309001",scrNm : "무인발권기_기본선택"}
-					,{scrId : "10309002",scrNm : "무인발권기_옵션선택(목적지)"}
-				]
-				,subMenuArrayLP : [
-					{scrId : "10309001",scrNm : "[저]무인발권기_기본선택"}
-					,{scrId : "10309002",scrNm : "[저]무인발권기_옵션선택(목적지)"}
-				]
-			}, {
-				middleMenuNm  : "셀프체크(숙박)",
-				middleMenuUrl : "10",
-				subMenuArray  : [
-					{scrId : "10310001",scrNm : "무인발권기_기본선택"}
-					,{scrId : "10310002",scrNm : "무인발권기_옵션선택(목적지)"}
-				]
-				,subMenuArrayLP : [
-					{scrId : "10310001",scrNm : "[저]무인발권기_기본선택"}
-					,{scrId : "10310002",scrNm : "[저]무인발권기_옵션선택(목적지)"}
-				]
-			}, {
-				middleMenuNm  : "중고휴대폰판매기",
-				middleMenuUrl : "11",
-				subMenuArray  : [
-					{scrId : "10311001",scrNm : "무인발권기_기본선택"}
-					,{scrId : "10311002",scrNm : "무인발권기_옵션선택(목적지)"}
-				]
-				,subMenuArrayLP : [
-					{scrId : "10311001",scrNm : "[저]무인발권기_기본선택"}
-					,{scrId : "10311002",scrNm : "[저]무인발권기_옵션선택(목적지)"}
-				]
-			}, {
-				middleMenuNm  : "박물관",
-				middleMenuUrl : "12",
-				subMenuArray  : [
-					{scrId : "10312001",scrNm : "무인발권기_기본선택"}
-					,{scrId : "10312002",scrNm : "무인발권기_옵션선택(목적지)"}
-				]
-				,subMenuArrayLP : [
-					{scrId : "10312001",scrNm : "[저]무인발권기_기본선택"}
-					,{scrId : "10312002",scrNm : "[저]무인발권기_옵션선택(목적지)"}
-				]
-			}
+			},
       ]
    },
-
-
 	Information :  {
 		id : "104",
 		nm : "안내",
@@ -331,7 +250,6 @@ let JsonMenu = {
 let largeMenu = "";
 let _menuMode = "";
 
-// 24.12.26 17:00 박해성
 let bMedia = false;
 let bAudio = false;
 
@@ -356,7 +274,7 @@ function screen_on_load()
 	this.fn_lKindSet();
 //	this.fn_modeChange();
 	
-	// 24.12.26 17:00 박해성
+
 	bMedia = this.chkBox.getcheck();
 	bAudio = this.chkBox_audio.getcheck();
 }
@@ -395,7 +313,6 @@ function fn_mKindSet(keyCode, mKind)
 	}
 }
 
-
 /**
  * 대분류 버튼 이벤트
  */
@@ -407,7 +324,6 @@ function PB_on_mouseup(objInst)
 	largeMenu = objInst.getdescription();
 	this.fn_MiddleMenuSet(objInst, menuArray);
 	
-	//20210110 추가함수
 	if(objNm == "PB_Ticket"){
 		this.fn_ChangImage();
 	} else {
@@ -681,20 +597,9 @@ function fn_MiddleMenuHidden()
 
 function PB_Prev_on_mouseup(objInst)
 {
-//	let templateObj = this.SV_Template;
-//	if(_menuMode == "lp"){
-//		templateObj = this.SV_Template_LP;
-//	} else {
-//		templateObj = this.SV_Template;
-//	}
-//	templateObj.moveprev();
 	let templateObj = this.SV_Template;
 	let templateObjLp = this.SV_Template_LP;
-//	if(_menuMode == "lp"){
-//		templateObj = this.SV_Template_LP;
-//	} else {
-//		templateObj = this.SV_Template;
-//	}
+	
 	templateObjLp.moveprev();
 	templateObj.moveprev();
 }
@@ -703,25 +608,10 @@ function PB_Next_on_mouseup(objInst)
 {
 	
 	SYSUtil.fn_debug(this, "_menuMode:"+_menuMode);
-//	let templateObj = this.SV_Template;
-//	if(_menuMode == "lp"){
-//		templateObj = this.SV_Template_LP;
-//	} else {
-//		templateObj = this.SV_Template;
-//	}
-//	SYSUtil.fn_debug(this, "templateObj:",templateObj);
-//	for(let i = 0; i < templateObj.getitemcount(); i++)
-//	{
-//		SYSUtil.fn_debug(this, i + "번째:" + templateObj.getitemhidden(i));
-//	}
-//	let ret = templateObj.movenext();
+
 	let templateObj = this.SV_Template;
 	let templateObjlp = this.SV_Template_LP;
-//	if(_menuMode == "lp"){
-//		templateObj = this.SV_Template_LP;
-//	} else {
-//		templateObj = this.SV_Template;
-//	}
+
 	SYSUtil.fn_debug(this, "templateObj:",templateObj);
 	for(let i = 0; i < templateObj.getitemcount(); i++)
 	{
@@ -738,7 +628,7 @@ function PB_Refresh_on_mouseup(objInst)
 {
 	window.location.reload();
 }
-//20240110 추가함수
+
 function fn_ChangImage()
 {
 	let PB = this.PB_0.gettext();
@@ -750,7 +640,6 @@ function fn_ChangImage()
 let videoTF = false;
 function SV_Template_on_afteritemchange(objInst, itemPrevIndex, itemCurrIndex)
 {
-	// 24.12.26 15:12 박해성
 	let resPr = this.SV_Template.getcustomprop("resPr");
 	
 	if(this.chkBox.getcheck() == true) {
@@ -763,8 +652,7 @@ function SV_Template_on_afteritemchange(objInst, itemPrevIndex, itemCurrIndex)
 			videoTF = true;
 			if (tabObj != null) {
 				this.PN_Sl.setzorder(0);
-				// (박해성)캔버스 setzorder는 svg zorder이므로 패널로 대체
-//				this.CV_Sl.setzorder(0);
+
 				this.pn_Video.setzorder(0);
 				
 				this.PN_Sl.setvisible(true);
@@ -774,10 +662,8 @@ function SV_Template_on_afteritemchange(objInst, itemPrevIndex, itemCurrIndex)
 				
 				let cls = factory.httpexistfile(videoUrl, true);
 				
-				// Fail: 비디오(*.mp4) 파일이 존재하지않으면 가림
 				if(cls.nresult == 0) {
 					this.PN_Sl.setvisible(false);
-//					this.CV_Sl.setvisible(false);
 					this.pn_Video.setvisible(false);
 					clearInterval(intervalId);
 					
@@ -801,13 +687,11 @@ function SV_Template_on_afteritemchange(objInst, itemPrevIndex, itemCurrIndex)
 			}
 		}, 1000);
 	}
-	// 24.12.31 13:36 박해성
 	if(this.chkBox_audio.getcheck() == true) {
 		this.fn_audioPlay(itemCurrIndex);
 	}
 }
 
-// 24.12.26 17:36 박해성
 // 오디오 재생
 function fn_audioPlay(itemCurrIndex)
 {
@@ -887,7 +771,6 @@ function chkBox_on_click(objInst)
 	//this.screen.messagebox("수어는 발급기에서만 사용할 수 있습니다.", "수어안내", 1, 2);
 }
 
-// 24.12.26 17:14 박해성
 // 1. 수어(bMedia)
 function chkBox_on_itemchange(objInst, prev_value, curr_value, event_type)
 {
@@ -903,30 +786,6 @@ function chkBox_audio_on_itemchange(objInst, prev_value, curr_value, event_type)
 //비디오 배속 설정
 function btn_Speed_on_click(objInst, bPrevCheckState, bCurCheckState)
 {
-	/*
-   let Vspeed = this.VD_Sl.getplaybackrate();
-   
-   if(Vspeed == 1 ){
-      if(this.screen.getfocuscontrolctrlid() == 584) {
-         this.VD_Sl.setplaybackrate(1.5);
-      } else if(this.screen.getfocuscontrolctrlid() == 582) {
-         this.VD_Sl.setplaybackrate(0.5);
-      } else if(this.screen.getfocuscontrolctrlid() == 583){
-         this.VD_Sl.setplaybackrate(1);
-      }
-   }
-   if (Vspeed != 1) {
-      if(this.screen.getfocuscontrolctrlid() == 584) {
-         this.VD_Sl.setplaybackrate(1.5);
-      } else if(this.screen.getfocuscontrolctrlid() == 582) {
-         this.VD_Sl.setplaybackrate(0.5);
-      } else if(this.screen.getfocuscontrolctrlid() == 583){
-         this.VD_Sl.setplaybackrate(1);
-      } 
-   }
-	*/
-	
-	// 24.12.26 16:12 박해성
 	let radioNm = objInst.getname();	// rd_Speed05x, rd_Speed1x, rd_Speed15x
 	switch(radioNm) {
 		// 1.5배
@@ -1007,7 +866,6 @@ function fn_modeChange()
 		}
 	}
 }
-//==============24.03.05
 
 function screen_on_keydown(keycode, bctrldown, bshiftdown, baltdown, bnumpadkey)
 {
@@ -1085,8 +943,6 @@ function RD_LP_on_click(objInst, bPrevCheckState, bCurCheckState)
 		this.TB_hcMode.setstate(true);
 	}
 }
-
-
 
 function btn_data_on_mouseup(objInst)
 {
