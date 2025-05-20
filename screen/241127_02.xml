@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<map_list>
-	<map>
-		<screen version="2.0" scriptcode="java" title="(완)필드 마지막만 색상주기" screenid="241127_02" last_update_date="2024-11-27 17:14:30" width="812" width_type="0" height="500" height_type="0" on_load="eventfunc:screen_on_load()" funclist="screen_on_load,HE_1_on_change"/>
-		<htmleditor control_id="3" name="HE_1" x="12" y="6" right="674" bottom="464" width="126" height="30" font="맑은 고딕,9,0,0,0,0" menubar_show="0" menubar_format_show="0" toolbar_show="0" footbar_show="0" padding="10" on_change="eventfunc:HE_1_on_change(objInst)"/>
-	</map>
-</map_list>
