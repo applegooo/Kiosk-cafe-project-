@@ -1,5 +1,4 @@
 ﻿function screen_on_load() {
-    // 24.12.26 18:16 박해성
     // 부모 화면의 부모 화면을 가져옴 (즉, 두 단계 위의 화면)
     let grandParentScr = this.screen.getparent()?.getparent();  // 부모 화면의 부모 화면을 가져오기
     console.log("부모 화면의 부모 화면: ", grandParentScr);
@@ -64,7 +63,6 @@ function btn_clo_on_mouseup(objInst)
 }
 
 function onCheckboxClick(clickedCheckbox) {
-	// 24.12.26 18:07 박해성
     // 모든 체크박스 ID를 배열로 나열
 //	let checkboxes = [this.ck_1, this.ck_2, this.ck_3, this.ck_4, this.ck_5];
 	let checkboxes = [this.ck_1, this.ck_5];
@@ -89,7 +87,6 @@ function btn_ok_on_mouseup(objInst) {
     // 접근성 팝업을 닫는 함수 호출
     this.screen.unloadpopup();
 
-    // 24.12.26 18:14 박해성
     // 현재 화면에서 "ck_1", "ck_2", "ck_3", "ck_4", "ck_5" 버튼의 상태를 가져옴
     let ck1Button = this.screen.getinstancebyname("ck_1");
     let ck2Button = this.screen.getinstancebyname("ck_2");

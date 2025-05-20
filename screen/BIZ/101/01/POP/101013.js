@@ -1,6 +1,5 @@
 ﻿function screen_on_load()
 {
-	// 24.12.26 18:16 박해성
 	// 부모 화면의 부모 화면을 가져옴 (즉, 두 단계 위의 화면)
 	let grandParentScr = this.screen.getparent()?.getparent();  // 부모 화면의 부모 화면을 가져오기
 	
@@ -43,20 +42,17 @@
 //팝업 닫기
 function btn_Close_on_mouseup(objInst)
 {
-	//this.factory.closepopup("접근성(팝업)");
 	this.screen.unloadpopup();
 }
 
 function btn_clo_on_mouseup(objInst)
 {
-	//this.factory.closepopup("접근성(팝업)");
 		this.screen.unloadpopup();
 }
 
 function onCheckboxClick(clickedCheckbox) {
-	// 24.12.26 18:07 박해성
     // 모든 체크박스 ID를 배열로 나열
-//	let checkboxes = [this.ck_1, this.ck_2, this.ck_3, this.ck_4, this.ck_5];
+	//let checkboxes = [this.ck_1, this.ck_2, this.ck_3, this.ck_4, this.ck_5];
 	let checkboxes = [this.ck_1, this.ck_5];
 
     // 클릭된 체크박스를 제외한 나머지 체크박스들 처리
@@ -80,7 +76,6 @@ function btn_ok_on_mouseup(objInst)
      // 접근성 팝업을 닫는 함수 호출
     this.screen.unloadpopup();
 
-    // 24.12.26 18:14 박해성
     // 현재 화면에서 "ck_1", "ck_2", "ck_3", "ck_4", "ck_5" 버튼의 상태를 가져옴
     let ck1Button = this.screen.getinstancebyname("ck_1");  // "ck_1" 버튼 인스턴스 가져오기
     let ck2Button = this.screen.getinstancebyname("ck_2");  // "ck_2" 버튼 인스턴스 가져오기
@@ -108,7 +103,7 @@ function btn_ok_on_mouseup(objInst)
         if (isCk1Checked) {
             let sld_Template = grandParentScr.getinstancebyname("SV_Template");  // "SV_Template" 슬라이드뷰 인스턴스를 가져옴
             if (sld_Template) {  // 슬라이드뷰 인스턴스가 존재하면
-                // 24.12.31 13:45 박해성
+
                 // media 상단 위치 세팅
                 mBizMain.pn_Video.settop(222);
                 mBizMain.PN_Sl.settop(230);
@@ -122,7 +117,7 @@ function btn_ok_on_mouseup(objInst)
         if (isCk5Checked) {
             let sld_Lp = grandParentScr.getinstancebyname("SV_Template_LP");  // "SV_Template_LP" 슬라이드뷰 인스턴스를 가져옴
             if (sld_Lp) {  // 슬라이드뷰 인스턴스가 존재하면
-                // 24.12.31 13:47 박해성
+
                 // media 상단 위치 세팅
                 mBizMain.pn_Video.settop(932);
                 mBizMain.PN_Sl.settop(940);
