@@ -61,7 +61,7 @@
 
 ## 📸 화면 예시
 
-> https://github.com/user-attachments/assets/ef6addae-6f03-4468-9f16-8eb61d042124
+> https://github.com/user-attachments/assets/02dcface-c5b5-41e6-9c2f-e2c8292afec7
 
 ---
 
