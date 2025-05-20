@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<map_list>
-	<map>
-		<screen version="2.0" scriptcode="java" title="KonvaTest1" directory="/SYS/UTIL/" screenid="KonvaTest1" last_update_date="2024-10-30 09:44:47" width="812" width_type="0" height="500" height_type="0" on_load="eventfunc:screen_on_load()" funclist="screen_on_load"/>
-		<div control_id="3" name="div" x="30" y="24" right="20" bottom="32" width="762" height="444" custom_class="konva" font="맑은 고딕,9,0,0,0,0" control_comment=""/>
-	</map>
-</map_list>

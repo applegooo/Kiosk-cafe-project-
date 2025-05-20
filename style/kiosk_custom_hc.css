@@ -1,0 +1,1149 @@
+@charset "utf-8";
+
+/** WebFont **/
+@font-face {
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/NotoSansKR-Light.woff2") format("woff2"),
+       url("../font/NotoSansKR-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/NotoSansKR-Regular.woff2") format("woff2"),
+       url("../font/NotoSansKR-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/NotoSansKR-Medium.woff2") format("woff2"),
+       url("../font/NotoSansKR-Medium.woff") format("woff");
+}
+
+
+
+/* 10101 전기차충전기 시작*/
+/*배경*/
+.PN_101_back ._xf_panel_content {background-color: rgb(0, 0, 0) !important;}
+.PB_101_back ._xf_btn_image {background-color:  rgb(0, 0, 0) !important;}
+.PN_101_startBack ._xf_panel_content {background-color: #1A1A1A !important;}
+
+/* 상단 타이틀 로고 */
+.IM_101_title {background-image: url(/project/image/BIZ/101/01/PUB/logo_electcar_charge_hc.png) !important;}
+
+/*시작버튼*/
+.PB_101_start ._xf_btn_image {background-image: url(/project/image/BIZ/101/01/PUB/start_bt_B_hc.png) !important;}
+.PB_101_start:active ._xf_btn_image {background-image: url(/project/image/BIZ/101/01/PUB/start_bt_B_o_hc.png) !important;}
+/*국기버튼*/
+/*.RD_101_korea {background-image: url(/project/image/BIZ/101/01/PUB/language_kr_bt_hc.png) !important;}*/
+.RD_101_korea._xf_rdo_on {background-image: url(/project/image/BIZ/101/01/PUB/language_kr_bt_o_hc.png) !important;}
+.RD_101_korea._xf_rdo_off {background-image: url(/project/image/BIZ/101/01/PUB/language_kr_bt_hc.png) !important;}
+.RD_101_ameraca._xf_rdo_on {background-image: url(/project/image/BIZ/101/01/PUB/language_eng_bt_o_hc.png) !important;}
+.RD_101_ameraca._xf_rdo_off {background-image: url(/project/image/BIZ/101/01/PUB/language_eng_bt_hc.png) !important;}
+.RD_101_japan._xf_rdo_on {background-image: url(/project/image/BIZ/101/01/PUB/language_jpa_bt_o_hc.png) !important;}
+.RD_101_japan._xf_rdo_off {background-image: url(/project/image/BIZ/101/01/PUB/language_jpa_bt_hc.png) !important;}
+.RD_101_china._xf_rdo_on {background-image: url(/project/image/BIZ/101/01/PUB/language_cha_bt_o_hc.png) !important;}
+.RD_101_china._xf_rdo_off {background-image: url(/project/image/BIZ/101/01/PUB/language_cha_bt_hc.png) !important;}
+.RD_101_korea ._xfd_padding_button{color: #F8F8F8 !important;}
+.RD_101_ameraca ._xfd_padding_button{color: #F8F8F8 !important;}
+.RD_101_japan ._xfd_padding_button{color: #F8F8F8 !important;}
+.RD_101_china ._xfd_padding_button{color: #F8F8F8 !important;}
+
+
+/*홈버튼(처음으로)*/
+.PB_101_home ._xf_btn_image {background-image: url(/project/image/BIZ/101/01/PUB/home_bt_G_hc.png) !important; color: #F8F8F8 !important;}
+.PB_101_home ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/01/PUB/home_bt_G_o_hc.png) !important; color: #F8F8F8 !important;}
+
+/*접근성버튼*/
+.PB_101_access ._xf_btn_image {background-image:url(/project/image/BIZ/101/01/PUB/lowsc_bt_hc.png) !important; color: #FFFFFF !important;}
+.PB_101_access ._xf_btn_image:active {background-image:url(/project/image/BIZ/101/01/PUB/lowsc_bt_o_hc.png) !important; color: #FFFFFF !important;}
+
+/*이전버튼*/
+.PB_101_Previous ._xf_btn_image{background-image: url(/project/image/BIZ/101/01/PUB/back_bt_hc.png) !important; color: #FFFFFF !important;}
+.PB_101_Previous ._xf_btn_image:active{background-image: url(/project/image/BIZ/101/01/PUB/back_bt_o_hc.png) !important; color: #FFFFFF !important;}
+
+/*나라국기*/
+.PB_101_selLanguage ._xf_btn_image {background-image:url(/project/image/BIZ/101/01/PUB/language_lound_bt_hc.png) !important; color: #F8F8F8 !important;}
+.PB_101_selLanguage ._xf_btn_image:active {background-image:url(/project/image/BIZ/101/01/PUB/language_lound_bt_o_hc.png) !important; color: #F8F8F8 !important;}
+
+/*직원호출*/
+.PB_101_call ._xf_btn_image {background-image:url(/project/image/BIZ/101/01/PUB/call_bt_R_hc.png) !important;}
+.PB_101_call ._xf_btn_image:active {background-image:url(/project/image/BIZ/101/01/PUB/call_bt_R_o_hc.png) !important;}
+
+/*스탭바패널*/
+.PN_101_bgG ._xf_panel_content {background-image: url(/project/image/BIZ/101/01/PUB/bg_G_1080x150_hc.png) !important;}
+
+/*스탭바*/
+.PN_101_stepBar_1 ._xf_panel_content {background-image: url(/project/image/BIZ/101/01/PUB/comn_5step_B_bar_1_hc.png) !important; background-color: transparent !important;}
+.PN_101_stepBar_2 ._xf_panel_content {background-image: url(/project/image/BIZ/101/01/PUB/comn_5step_B_bar_2_hc.png) !important; background-color: transparent !important;}
+.PN_101_stepBar_3 ._xf_panel_content {background-image: url(/project/image/BIZ/101/01/PUB/comn_5step_B_bar_3_hc.png) !important; background-color: transparent !important;}
+.PN_101_stepBar_4 ._xf_panel_content {background-image: url(/project/image/BIZ/101/01/PUB/comn_5step_B_bar_4_hc.png) !important; background-color: transparent !important;}
+.PN_101_stepBar_5 ._xf_panel_content {background-image: url(/project/image/BIZ/101/01/PUB/comn_5step_B_bar_5_hc.png) !important; background-color: transparent !important;}
+
+/*스탭완료텍스트*/
+.TX_101_stepDone {color: #FFFFFF !important;}
+
+/*스탭진행텍스트*/
+.TX_101_step {color: #BBBBBB !important;}
+
+/*기본텍스트*/
+.TX_101_contents {color: #FFFFFF !important;} /* 흰색 */
+.TX_101_subContents {color: #FFD112 !important;} /* 노랑 */
+.TX_101_G {color: #AFAFB0 !important;}  /* 회색 */
+
+
+/*회원카드버튼*/
+.PB_101_membershipCard ._xf_btn_image{background-image: url(/project/image/BIZ/101/01/PUB/membership_card_bt_hc.png) !important; color: #FFFFFF !important;}
+.PB_101_membershipCard ._xf_btn_image:active{background-image: url(/project/image/BIZ/101/01/PUB/membership_card_bt-1_hc.png) !important; color: #AFAFB0 !important;}
+
+/* 신용카드버튼*/
+.PB_101_creditCard ._xf_btn_image{background-image: url(/project/image/BIZ/101/01/PUB/pay_card_bt_hc.png) !important; color: #FFFFFF !important;}
+.PB_101_creditCard ._xf_btn_image:active{background-image: url(/project/image/BIZ/101/01/PUB/pay_card_bt-1_hc.png) !important; color: #AFAFB0 !important;}
+
+/*  탭아이템 이미지 */
+.PN_101_back ._xf_tab_item {background-image: url(/project/image/BIZ/101/01/PUB/tap_bt_LG_250x100_hc.png) !important; color: #AFAFB0 !important; }
+.PN_101_back ._xf_tab_item_focus {background-image: url(/project/image/BIZ/101/01/PUB/tap_bt_G_250x100_hc.png) !important; color: #FFFFFF !important; } 
+
+/* 초기화버튼 */
+.PB_101_init ._xf_btn_image{background-image: url(/project/image/BIZ/101/01/PUB/bin_bt_LB_210x100_hc.png) !important; }
+
+/* 금액버튼 */
+.PB_101_amount ._xf_btn_image {background-image: url(/project/image/BIZ/101/01/PUB/list_gu_big_bt_hc.png) !important; color: #AFAFB0 !important; }
+.PB_101_amount ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/01/PUB/list_gu_big_bt_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 탭 아이템 박스 */
+.TP_101_box ._xf_tab_panel_content {background-color: #000000 !important;}
+
+/* 설정완료버튼 */
+.PB_101_com ._xf_btn_image {background-image: url(/project/image/BIZ/101/01/PUB/bin_bt_B_600x125_hc.png) !important; color: #FFFFFF !important; }
+.PB_101_com ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/01/PUB/bin_bt_B_600x125_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 결제금액패널 */
+.PN_101_payMent ._xf_panel_content{background-image: url(/project/image/BIZ/101/01/PUB/school_doc_name_box_hc.png) !important; }
+
+/* 충전내역패널 3개짜리 */
+.PN_101_charg_3 ._xf_panel_content{background-image: url(/project/image/BIZ/101/01/PUB/table_G_760x253_hc.png) !important; }
+
+/* 충전내역패널 4개짜리 */
+.PN_101_charg_4 ._xf_panel_content{background-image: url(/project/image/BIZ/101/01/PUB/table_G_760x335_hc.png) !important; }
+
+/* X, O 버튼 */
+.PB_101_yes ._xf_btn_image {background-image: url(/project/image/BIZ/101/01/PUB/point_yes_bt_360x230_hc.png) !important; color: #FFFFFF !important; }
+.PB_101_yes ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/01/PUB/point_yes_bt_360x230_o_hc.png) !important; color: #FFFFFF !important; }
+.PB_101_no ._xf_btn_image {background-image: url(/project/image/BIZ/101/01/PUB/point_no_bt_360x230_hc.png) !important; color: #FFFFFF !important; }
+.PB_101_no ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/01/PUB/point_no_bt_360x230_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 전기차충전기 로고 */
+.PN_101_logo_g ._xf_panel_content{background-image: url(/project/image/BIZ/101/01/PUB/logo_mart_grey_hc.png) !important; }
+
+/* 알림생략/확인 버튼 POP */
+.PB_101_click ._xf_btn_image {background-image: url(/project/image/BIZ/101/01/PUB/bin_bt_G_320x120_hc.png) !important; color: #FFFFFF !important; }
+.PB_101_click ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/01/PUB/bin_bt_B_320x120_hc.png) !important; color: #FFFFFF !important; }
+
+/* 휴대폰 번호 입력필드 */
+.FD_101_num ._xf_number {background-image: url(/project/image/BIZ/101/01/PUB/num_box_740x135_hc.png) !important; color: #FFFFFF !important; }
+
+/* 숫자 버튼 */
+.PB_101_num ._xf_btn_image {background-image: url(/project/image/BIZ/101/01/PUB/num_bt_W_190x130_hc.png) !important; color: #AFAFB0 !important; }
+.PB_101_num ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/01/PUB/num_bt_W_190x130_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 숫자 지우기 버튼 */
+.PB_101_num_1 ._xf_btn_image {background-image: url(/project/image/BIZ/101/01/PUB/num_del_bt_hc.png) !important; color: #AFAFB0 !important; }
+.PB_101_num_1 ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/01/PUB/num_del_bt_W_190x130_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 팝업 배경 변경 */
+.PN_101_backImage ._xf_panel_content{background-image: url(/project/image/BIZ/101/01/PUB/pop_bg_900x1546_hc.png) !important; }
+
+/* 탭 아이템 ex 선 */
+.TP_101_box ._xf_tab_panel_box {border-color: rgb(255,221,2) !important;}
+.TP_101_back ._xf_tab_item_border:not(._xf_tab_item_focus ._xf_tab_item_border) {border-bottom-color: rgb(255,221,2) !important;}
+
+/* 10101 전기차충전기 종료*/
+
+/* 10102 무인상품판매기 시작*/
+
+/*상단 타이틀 로고*/
+.IM_102_title {background-image: url(/project/image/BIZ/101/02/PUB/logo_icecream_hc.png) !important;}
+
+/*스탭바*/
+.PN_102_stepBar_1 ._xf_panel_content {background-image: url(/project/image/BIZ/101/02/PUB/comn_3step_B_S_bar_1_hc.png) !important; background-color: transparent !important;}
+.PN_102_stepBar_2 ._xf_panel_content {background-image: url(/project/image/BIZ/101/02/PUB/comn_3step_B_S_bar_2_hc.png) !important; background-color: transparent !important;}
+.PN_102_stepBar_3 ._xf_panel_content {background-image: url(/project/image/BIZ/101/02/PUB/comn_3step_B_S_bar_3_hc.png) !important; background-color: transparent !important;}
+
+/*기본텍스트 색상*/
+.TX_102_contents {color: #F8F8F8 !important;} /* 흰색  */
+
+/* 결제하기 버튼 */
+.PB_102_pay ._xf_btn_image {background-image: url(/project/image/BIZ/101/02/PUB/bin_bt_B_270x250_hc.png) !important; color: #AFAFB0 !important; }
+.PB_102_pay ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/02/PUB/bin_bt_B_270x250_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 패널 색상 */
+.PN_102_rec ._xf_panel_content {background-color : #373737 !important;}
+
+/* 이전페이지 버튼*/
+.PB_102_pre ._xf_btn_image {background-image: url(/project/image/BIZ/101/02/PUB/pre_bt_G_270x100_hc.png) !important; color: #AFAFB0 !important; }
+.PB_102_pre ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/02/PUB/pre_bt_G_270x100_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 다음페이지버튼 */
+.PB_102_next ._xf_btn_image {background-image: url(/project/image/BIZ/101/02/PUB/next_bt_G_270x100_hc.png) !important; color: #AFAFB0 !important; }
+.PB_102_next ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/02/PUB/next_bt_G_270x100_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 신용카드 버튼*/
+.PB_102_cade ._xf_btn_image {background-image: url(/project/image/BIZ/101/02/PUB/pay_card_bt_285x280_hc.png) !important; color: #AFAFB0 !important; }
+.PB_102_cade ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/02/PUB/pay_card_bt_285x280_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* NIA페이 버튼*/
+.PB_102_NIA ._xf_btn_image {background-image: url(/project/image/BIZ/101/02/PUB/pay_pay_bt_285x280_hc.png) !important; color: #AFAFB0 !important; }
+.PB_102_NIA ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/02/PUB/pay_pay_bt_285x280_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 현금 버튼*/
+.PB_102_cash ._xf_btn_image {background-image: url(/project/image/BIZ/101/02/PUB/pay_cash_bt_285x280_hc.png) !important; color: #AFAFB0 !important; }
+.PB_102_cash ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/02/PUB/pay_cash_bt_285x280_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 아이스크림 할인점 로고 */
+.PN_102_log ._xf_panel_content {background-image: url(/project/image/BIZ/101/02/PUB/logo_icecream_G_hc.png) !important;}
+
+/* 수량텍스트 */
+.PN_102_num ._xf_panel_content {background-image: url(/project/image/BIZ/101/02/PUB/menulist_numbox_bg-1_hc.png) !important;}
+
+/* 패널보더색 */
+.PN_102_bor ._xf_panel_outer_content_wrapper  {border-color: rgb(255,221,2) !important; background-color: #202020  !important;}
+
+/* 마이너스버튼 */
+.PB_102_minus ._xf_btn_image {background-image: url(/project/image/BIZ/101/02/PUB/menulist_minus_bt_hc.png) !important; }
+.PB_102_minus ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/02/PUB/menulist_minus_bt-1_hc.png) !important; }
+/* .PB_102_minus ._xf_btn_image:focus {background-image: url(/project/image/BIZ/101/02/PUB/menulist_minus_bt_dim_hc.png) !important; } */
+
+/* 플러스버튼 */
+.PB_102_plus ._xf_btn_image {background-image: url(/project/image/BIZ/101/02/PUB/menulist_plus_bt_hc.png) !important; }
+.PB_102_plus ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/02/PUB/menulist_plus_bt-1_hc.png) !important; }
+/* .PB_102_plus ._xf_btn_image:focus {background-image: url(/project/image/BIZ/101/02/PUB/menulist_plus_bt_dim_hc.png) !important; } */
+
+/* 닫기버튼 */
+.PB_102_close ._xf_btn_image {background-image: url(/project/image/BIZ/101/02/PUB/bt_close_100_hc.png) !important; }
+.PB_102_close ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/02/PUB/bt_close_100_o_hc.png) !important; }
+/* .PB_102_close ._xf_btn_image:focus {background-image: url(/project/image/BIZ/101/02/PUB/bt_close_100_foc_hc.png) !important; } */
+
+
+/* 10101 무인상품판기 종료*/
+
+
+/* 즉석사진인화기 */
+
+/*스탭바*/
+.PN_103_stepBar_1 ._xf_panel_content {background-image: url(/project/image/BIZ/101/03/PUB/comn_5step_B_bar_1_hc.png) !important; background-color: transparent !important;}
+.PN_103_stepBar_2 ._xf_panel_content {background-image: url(/project/image/BIZ/101/03/PUB/comn_5step_B_bar_2_hc.png) !important; background-color: transparent !important;}
+.PN_103_stepBar_3 ._xf_panel_content {background-image: url(/project/image/BIZ/101/03/PUB/comn_5step_B_bar_3_hc.png) !important; background-color: transparent !important;}
+.PN_103_stepBar_4 ._xf_panel_content {background-image: url(/project/image/BIZ/101/03/PUB/comn_5step_B_bar_4_hc.png) !important; background-color: transparent !important;}
+.PN_103_stepBar_5 ._xf_panel_content {background-image: url(/project/image/BIZ/101/03/PUB/comn_5step_B_bar_5_hc.png) !important; background-color: transparent !important;}
+
+/* 180초  시간연장 */
+.PB_103_unlimit ._xf_btn_image{background-image:url(/project/image/BIZ/101/03/PUB/bt_photo_delay_hc.png) !important; color:#FFFFFF;}
+.PB_103_unlimit ._xf_btn_image:active{background-image:url(/project/image/BIZ/101/03/PUB/bt_photo_delay_o_hc.png) !important; color:#FFFFFF;}
+
+
+/* 사진프레임 */
+.PB_103_cut3 ._xf_btn_image {background-image: url(/project/image/BIZ/101/03/PUB/photo_bt_type_1_hc.png) !important; color:#AFAFB0;}
+.PB_103_cut4 ._xf_btn_image {background-image: url(/project/image/BIZ/101/03/PUB/photo_bt_type_2_hc.png) !important;color:#AFAFB0;}
+.PB_103_cut4_1 ._xf_btn_image {background-image: url(/project/image/BIZ/101/03/PUB/photo_bt_type_3_hc.png) !important;color:#AFAFB0;}
+.PB_103_cut6 ._xf_btn_image {background-image: url(/project/image/BIZ/101/03/PUB/photo_bt_type_4_hc.png) !important;color:#AFAFB0;}
+
+/* 사진프레임 active */
+.PB_103_cut3 ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/03/PUB/photo_bt_type_1_o_hc.png) !important; color:#FFFFFF;}
+.PB_103_cut4 ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/03/PUB/photo_bt_type_2_o_hc.png) !important; color:#FFFFFF;}
+.PB_103_cut4_1 ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/03/PUB/photo_bt_type_3_o_hc.png) !important; color:#FFFFFF;}
+.PB_103_cut6 ._xf_btn_image:active {background-image: url(/project/image/BIZ/101/03/PUB/photo_bt_type_4_o_hc.png) !important; color:#FFFFFF;}
+
+
+
+/* 사진프레임 */
+.PN_103_cuts {background-image: url(/project/image/BIZ/101/03/PUB/photo_img_hc.png) !important;}
+
+/* 수량배경 */
+.PN_103_back ._xf_panel_content{background-image:url(/project/image/BIZ/101/03/PUB/num_box_424x112_hc.png) !important;}
+
+/* 마이너스 버튼 */
+.PB_103_minus ._xf_btn_image {background-image: url(/project/image/BIZ/101/03/PUB/minus_bt_105x103_hc.png) !important;}
+.PB_103_minus ._xf_btn_image:active{background-image: url(/project/image/BIZ/101/03/PUB/minus_bt_105x103_o_hc.png) !important;}
+/* 플러스 버튼 */
+.PB_103_plus ._xf_btn_image{background-image: url(/project/image/BIZ/101/03/PUB/plus_bt_105x103_hc.png) !important;}
+.PB_103_plus ._xf_btn_image:active{background-image: url(/project/image/BIZ/101/03/PUB/plus_bt_105x103_o_hc.png) !important;}
+
+/* school dock */
+.PN_103_infoNum {background-image:url(/project/image/BIZ/101/03/PUB/school_doc_name_box_hc.png) !important;}
+/* 네컷 프레임 */
+.PN_103_frame1 {background-image:url(/project/image/BIZ/101/03/PUB/photo_img_type1_hc.png) !important;}
+.PN_103_frame1_full {background-image:url(/project/image/BIZ/101/03/PUB/photo_img_type1-2_hc.png) !important;}
+/* 네컷 미들배경 */
+.PN_103_midBack ._xf_panel_content {background-image:url(/project/image/BIZ/101/03/PUB/photo_linebox_hc.png) !important;}
+/* 네컷 초기화 버튼 */
+.PB_103_reset ._xf_btn_image{background-image:url(/project/image/BIZ/101/03/PUB/bin_Wline_bt_175x70_hc.png) !important; background-color:transparent;color:#FFFFFF;}
+.PB_103_reset ._xf_btn_image:active{background-image:url(/project/image/BIZ/101/03/PUB/bin_Wline_bt_175x70_o_hc.png) !important; color:#FFD112;}
+/* 프레임 색상 틀 */
+.PN_103_frame_gray{background-image: url(/project/image/BIZ/101/03/PUB/photo_frame_type1_hc.png) !important;}
+.PN_103_frame_color{background-image: url(/project/image/BIZ/101/03/PUB/photo_frame_type1-1_hc.png) !important;}
+
+
+/* 네컷 이전/다음 버튼 */
+.PB_103_prev ._xf_btn_image{background-image:url(/project/image/BIZ/101/03/PUB/pre_bt_G_100200_hc.png) !important ;color:#FFFFFF;}
+.PB_103_prev ._xf_btn_image:active{background-image:url(/project/image/BIZ/101/03/PUB/pre_bt_G_100200_1_hc.png) !important;}
+.PB_103_next ._xf_btn_image{background-image:url(/project/image/BIZ/101/03/PUB/pre_bt_G_100200-2_hc.png) !important;color:#FFFFFF;}
+.PB_103_next ._xf_btn_image:active{background-image:url(/project/image/BIZ/101/03/PUB/pre_bt_G_100200-2_o_hc.png) !important;}
+
+/* 무인카페 시작 */
+
+/* 출발시간대 버튼 */
+
+
+.PB_104_start ._xf_btn_image {background-image: url(/project/image/BIZ/102/04/start_bt_B_hc.png) !important;}
+.PB_104_start:active ._xf_btn_image {background-image: url(/project/image/BIZ/102/04/start_bt_B_o_hc.png) !important; }
+
+
+.PN_104_stepBar_1 ._xf_panel_content{background-image: url(/project/image/BIZ/102/04/comn_5step_BR_bar_1_hc.png) !important; background-color:transparent;}
+.PN_104_stepBar_2 ._xf_panel_content{background-image: url(/project/image/BIZ/102/04/comn_5step_BR_bar_2_hc.png) !important; background-color:transparent;}
+.PN_104_stepBar_3 ._xf_panel_content{background-image: url(/project/image/BIZ/102/04/comn_5step_BR_bar_3_hc.png) !important; background-color:transparent;}
+.PN_104_stepBar_4 ._xf_panel_content{background-image: url(/project/image/BIZ/102/04/comn_5step_BR_bar_4_hc.png) !important; background-color:transparent;}
+.PN_104_stepBar_5 ._xf_panel_content{background-image: url(/project/image/BIZ/102/04/comn_5step_BR_bar_5_hc.png) !important; background-color:transparent;}
+
+._xf_tab_item_box{background-color: #000000 !important;}
+
+.PB_104_menuBack ._xf_btn_image{background-image:url(/project/image/BIZ/102/04/list_252-270_hc.png) !important; color:#ffffff;}
+.PB_104_menuBack:active ._xf_btn_image{background-image:url(/project/image/BIZ/102/04/list_252-270_o_hc.png) !important; color:#ffffff;}
+
+
+/*2025-01-10 CSS 수정 */
+/*.PB_104_menuBackp ._xf_panel_content{background-image:url(/project/image/BIZ/102/04/list_252-270_hc.png) !important; color:#ffffff;}*/
+
+
+.TP_104_tabBack ._xf_tab_panel_content{background-color: #000000 !important;}
+.PN_104_popBack ._xf_panel_content{background-color: #000000 !important;}
+
+/* 음료온도 */
+.RD_104_menuHot._xf_rdo_on  {background-image: url(/project/image/BIZ/102/04/coffee_hot_bt_o_hc.png) !important; color: #FFFFFF !important; }
+.RD_104_menuHot._xf_rdo_off {background-image: url(/project/image/BIZ/102/04/coffee_hot_bt_hc.png)   !important; color: #FFFFFF !important; } 
+.RD_104_menuIce._xf_rdo_on  {background-image: url(/project/image/BIZ/102/04/coffee_ice_bt_o_hc.png) !important; color: #FFFFFF !important; }
+.RD_104_menuIce._xf_rdo_off {background-image: url(/project/image/BIZ/102/04/coffee_ice_bt_hc.png)   !important; color: #FFFFFF !important; } 
+
+/* 컵크기 */
+.RD_104_menuS._xf_rdo_on  {background-image: url(/project/image/BIZ/102/04/coffee_cup_1_bt_o_hc.png) !important; color: #FFFFFF !important; }
+.RD_104_menuS._xf_rdo_off {background-image: url(/project/image/BIZ/102/04/coffee_cup_1_bt_hc.png)   !important; color: #FFFFFF !important; } 
+.RD_104_menuM._xf_rdo_on  {background-image: url(/project/image/BIZ/102/04/coffee_cup_2_bt_o_hc.png) !important; color: #FFFFFF !important; }
+.RD_104_menuM._xf_rdo_off {background-image: url(/project/image/BIZ/102/04/coffee_cup_2_bt_hc.png)   !important; color: #FFFFFF !important; } 
+.RD_104_menuL._xf_rdo_on  {background-image: url(/project/image/BIZ/102/04/coffee_cup_3_bt_o_hc.png) !important; color: #FFFFFF !important; }
+.RD_104_menuL._xf_rdo_off {background-image: url(/project/image/BIZ/102/04/coffee_cup_3_bt_hc.png)   !important; color: #FFFFFF !important; } 
+/* 리스트뷰 이미지 */
+.IM_104_listImg._xf_img {background-image: url(/project/image/BIZ/102/04/list_bar_57690_hc.png)!important;} 
+ 
+
+/* 리스트뷰 버튼 */
+
+.PB_104_minus ._xf_btn_image        {background-image: url(/project/image/BIZ/102/04/minus_bt_DG_42x80_hc.png) !important;  }
+.PB_104_minus ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/04/minus_bt_DG_42x80_o_hc.png) !important; } 
+.PB_104_plus ._xf_btn_image         {background-image: url(/project/image/BIZ/102/04/plus_bt_DG_42x80_hc.png) !important;  }
+.PB_104_plus ._xf_btn_image:active  {background-image: url(/project/image/BIZ/102/04/plus_bt_DG_42x80_o_hc.png) !important; } 
+.PB_104_cha ._xf_btn_image          {background-image: url(/project/image/BIZ/102/04/bin_bt_DG_85x80_hc.png) !important;  }
+.PB_104_cha ._xf_btn_image:active   {background-image: url(/project/image/BIZ/102/04/bin_bt_DG_85x80_o_hc.png) !important; } 
+.PB_104_X ._xf_btn_image            {background-image: url(/project/image/BIZ/102/04/close_bt_G_71x80_hc.png) !important;  }
+.PB_104_X ._xf_btn_image:active     {background-image: url(/project/image/BIZ/102/04/close_bt_G_71x80_o_hc.png) !important; } 
+.TX_104_back {background-color: #000000 !important; color: #ffffff !important;} 
+
+/* 10204007화면 리스트뷰 */
+
+.LV_104_listBack ._xf_listview_item { background-color: #000000 !important;}
+.LV_104_menuBackp ._xf_listview_item {background-image:url(/project/image/BIZ/102/04/list_252-270_hc.png) !important; background-color: #000000 !important; color:#ffffff;}
+
+
+.IM_104_imgBack._xf_img{background-image:url(/project/image/BIZ/102/04/list_252-270_hc.png) !important; background-color: transparent !important;}
+
+.PB_104_prev ._xf_btn_image{background-image:url(/project/image/BIZ/102/04/pre_bt_B_275x80.png) !important;color:#ffffff;}
+.PB_104_prev:active ._xf_btn_image{background-image:url(/project/image/BIZ/102/04/pre_bt_B_275x80-1.png) !important;}
+.PB_104_next ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/next_bt_B_275x80.png) !important; color:#ffffff;}
+.PB_104_next:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/next_bt_B_275x80-1.png) !important; color:#ffffff;}
+
+.TX_104_WhiteTxt{color:#ffffff !important;}
+.TX_104_White ._xf_number{color:#ffffff !important;}
+.TX_104_Yellow {color: #ffdd01 !important;}
+.TX_104_YellowNum ._xf_number{color: #ffdd01 !important;}
+
+.PN_104_listScroll ._xf_panel_content{background-image:url(/project/image/BIZ/102/04/list_num_box_bg_hc.png) !important;}
+.PB_104_listUp ._xf_btn_image{background-image:url(/project/image/BIZ/102/04/cafe_list_up_hc.png) !important;}
+.PB_104_listUp:active ._xf_btn_image{background-image:url(/project/image/BIZ/102/04/cafe_list_up_o.png) !important;}
+
+.PB_104_listDown ._xf_btn_image{background-image:url(/project/image/BIZ/102/04/cafe_list_down_hc.png) !important;}
+.PB_104_listDown:active ._xf_btn_image{background-image:url(/project/image/BIZ/102/04/cafe_list_down_o.png) !important;}
+
+.PB_104_205105 ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/bin_bt_HC_250x105.png) !important; color:#ffffff;}
+.PB_104_205105:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/bin_bt_HC_250x105_o.png) !important; color:#ffffff;}
+.PB_104_250216 ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/bin_bt_HC_250x216.png) !important; color:#ffffff;}
+.PB_104_250216:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/bin_bt_HC_250x216_o.png) !important; color:#ffffff;}
+
+._xf_listview{background-color:#000000 !important;}
+
+.PB_104_upPrev ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pre_bt.png) !important;color:#ffffff;}
+.PB_104_upPrev:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pre_bt_o.png)!important;}
+.PB_104_downNext ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/next_bt.png) !important;color:#ffffff;}
+.PB_104_downNext:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/next_bt_o.png) !important;}
+
+.PB_104_card ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_card_bt_285x280_hc.png)!important;color:#ffffff;;}
+.PB_104_card:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_card_bt_285x280_o_hc.png)!important;;}
+
+.PB_104_niaPay ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_pay_bt_285x280_hc.png)!important;color:#ffffff;;}
+.PB_104_niaPay:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_pay_bt_285x280_o_hc.png)!important;;}
+
+.PB_104_cash ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_cash_bt_285x280_hc.png)!important;color:#ffffff;;}
+.PB_104_cash:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_cash_bt_285x280_o_hc.png)!important;;}
+
+.PB_104_mCoupon ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_m_coupon_bt_285x280_hc.png)!important;color:#ffffff;;}
+.PB_104_mCoupon:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_m_coupon_bt_285x280_o_hc.png)!important;;}
+
+.PB_104_barcode ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_barcode_bt_285x280_hc.png)!important;color:#ffffff;;}
+.PB_104_barcode:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_barcode_bt_285x280_o_hc.png)!important;;}
+
+.PB_104_giftcard ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_giftcard_bt_285x280_hc.png)!important;color:#ffffff;;}
+.PB_104_giftcard:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/pay_giftcard_bt_285x280_o_hc.png)!important;;}
+
+.PB_104_cancel ._xf_btn_image{background-image:url(/project/image/BIZ/102/04/bin_bt_HC_600x125.png)!important; color:#ffffff;}
+.PB_104_cancel:active ._xf_btn_image{background-image:url(/project/image/BIZ/102/04/bin_bt_HC_600x125_o.png)!important;}
+
+/* 무인카페 팝업 */
+
+.PB_104_320120 ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/bin_bt_HC_320x120.png) !important; }
+.PB_104_320120:active ._xf_btn_image{background-image: url(/project/image/BIZ/102/04/bin_bt_HC_320x120_o.png) !important; }
+
+
+/* 음식점 시작 */
+
+/*상단 타이틀 로고*/
+.PB_105_title ._xf_btn_image{background-image: url(/project/image/BIZ/102/05/PUB/logo_restaurant_hc.png) !important;}
+
+/*시작버튼*/
+.PB_105_start ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/start_bt_R_hc.png) !important;}
+.PB_105_start ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/start_bt_R_o_hc.png) !important;}
+
+/*스탭바*/
+.PN_105_stepBar_1 ._xf_panel_content {background-image: url(/project/image/BIZ/102/05/PUB/comn_5step_R_bar_1_hc.png) !important; background-color: transparent !important;}
+.PN_105_stepBar_2 ._xf_panel_content {background-image: url(/project/image/BIZ/102/05/PUB/comn_5step_R_bar_2_hc.png) !important; background-color: transparent !important;}
+.PN_105_stepBar_3 ._xf_panel_content {background-image: url(/project/image/BIZ/102/05/PUB/comn_5step_R_bar_3_hc.png) !important; background-color: transparent !important;}
+.PN_105_stepBar_4 ._xf_panel_content {background-image: url(/project/image/BIZ/102/05/PUB/comn_5step_R_bar_4_hc.png) !important; background-color: transparent !important;}
+.PN_105_stepBar_5 ._xf_panel_content {background-image: url(/project/image/BIZ/102/05/PUB/comn_5step_R_bar_5_hc.png) !important; background-color: transparent !important;}
+
+/*매장버튼*/
+.PB_105_store ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/in_store_bt_hc.png) !important; color: #AFAFB0 !important}
+.PB_105_store ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/in_store_bt_o_hc.png) !important; color: #FFFFFF !important;}
+
+/*포장버튼*/
+.PB_105_tack ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/take_out_bt_hc.png) !important; color: #AFAFB0 !important}
+.PB_105_tack ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/take_out_bt_o_hc.png) !important; color: #FFFFFF !important;}
+
+/* 패널 색상 */
+.PN_105_color_2 .PN_105_rec ._xf_panel_content, .PN_105_color_1 .PN_105_rec ._xf_panel_content {background-color : #101010 !important; }
+
+/* 전체삭제 버튼  */
+.PB_105_del ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_G_250x105_hc.png) !important; color: #FFFFFF !important;}
+
+/* 이전페이지 버튼*/
+.PB_105_pre ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/pre_bt_G_275x80_hc.png) !important;  color: #FFFFFF !important;}
+.PB_105_pre ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/pre_bt_G_275x80_o_hc.png) !important; color: #FFFFFF !important;}
+
+/* 다음페이지버튼 */
+.PB_105_next ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/next_bt_G_275x80_hc.png) !important; color: #FFFFFF !important;}
+.PB_105_next ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/next_bt_G_275x80_o_hc.png) !important;  color: #FFFFFF !important;}
+
+/* up버튼*/
+.PB_105_up ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/cafe_list_up_hc.png) !important;  }
+.PB_105_up ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/up_bt_BR_75x100_o_hc.png) !important;  }
+
+/* down버튼 */
+.PB_105_down ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/cafe_list_down_hc.png) !important; }
+.PB_105_down ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/dwn_bt_BR_75x100_o_hc.png) !important;  }
+
+/* up/down 패널  */
+.PN_105_box ._xf_panel_content {background-image: url(/project/image/BIZ/102/05/PUB/list_num_box_bg_hc.png) !important; }
+
+/* 주문하기 버튼 */
+.PB_105_ord ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_R_250x216_hc.png) !important; }
+.PB_105_ord ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_R_250x216_o_hc.png) !important;  }
+
+/* 팝업화면 패널 */
+.PN_105_pop ._xf_panel_content {background-image: url(/project/image/BIZ/102/05/PUB/option_pop_bg_hc.png) !important; }
+/* 팝업화면 소분류 패널 */
+.PN_105_pop_1 ._xf_panel_outer_content_wrapper {border-color: #FFFFFF !important; border-width:5px !important; }  
+
+/* 팝업화면 취소버튼 */
+.PB_105_close ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_BR_320x120_hc.png) !important; }
+.PB_105_close ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_R_320x120_hc.png) !important;  }
+
+/* 팝업화면 다음버튼 */
+.PB_105_turn ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_BR_320x120_hc.png) !important; }
+.PB_105_turn ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_R_320x120_hc.png) !important;  }
+
+/* 버튼 보더색 변경 */
+.PB_105_pop_1 {border-color: #FFFFFF !important; border-width:5px !important; } 
+
+/*  탭아이템 이미지 */
+.TP_105_back ._xf_tab_item {background-image: url(/project/image/BIZ/102/05/PUB/tap_bt_DBR_hc.png) !important; color: #AFAFB0 !important; }
+.TP_105_back ._xf_tab_item_focus {background-image: url(/project/image/BIZ/102/05/PUB/tap_bt_W_hc.png) !important; color: #FFFFFF !important; } 
+
+/* 탭 아이템 ex 선 */
+.TP_101_backex ._xf_tab_item_border:not(._xf_tab_item_focus ._xf_tab_item_border) {border-bottom-color: rgb(255,221,2) !important;}
+
+/* X 버튼 */
+.PB_105_X ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/close_bt_G_71x80_hc.png) !important; }
+.PB_105_X ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/close_bt_G_71x80_o_hc.png) !important;  }
+
+/* 작은 패널 */
+.PN_105_list ._xf_panel_content {background-image: url(/project/image/BIZ/102/05/PUB/list_bar_57690_hc.png) !important; }
+
+/* 탭아이템 색상 */
+.TP_105_color_1 ._xf_tab_panel_content { background-color: rgb(0, 0, 0) !important; }
+
+/* 패널아이템 색상 */
+.PN_105_color_1 ._xf_panel_content { background-color: #101010 !important; }
+.PN_105_color_2 ._xf_panel_content { background-color: #101010 !important; }
+.PN_105_color_3 ._xf_panel_content { background-color: #101010 !important; } 
+
+/* 변경 버튼 */
+.PB_105_change ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_DG_83x80_hc.png) !important; }
+.PB_105_change ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_DG_85x80_o_hc.png) !important;  }
+
+/* 결제하기 버튼 */
+.PB_105_pay ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/pay_bt_R_250x260_hc.png) !important; }
+.PB_105_pay ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/pay_bt_R_250x260_o_hc.png) !important;  }
+
+/* 숫자필드 */
+.FD_105_num {background-image: url(/project/image/BIZ/102/05/PUB/num_box_740x135_hc.png) !important; color: #FFFFFF !important; }
+
+/* 빨간색-> 노란색 */
+.TX_105_R {color: #FFD112 !important;}
+.TX_105_Y ._xf_number{color: #FFD112 !important;}
+.TX_105_G {color: #A8A9A8 !important;}
+.TX_105_W {color:#ffffff !important;}
+.TX_105_NW ._xf_number{color:#ffffff !important;}
+
+
+/* 확인 버튼 */
+.PB_105_check ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_BR_600x125_hc.png) !important; }
+.PB_105_check ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/bin_bt_R_600x125_hc.png) !important;  }
+
+/* 신용카드 버튼*/
+.PB_105_cade ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/pay_card_bt_285x280_hc.png) !important; color: #AFAFB0 !important; }
+.PB_105_cade ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/pay_card_bt_285x280_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* NIA페이 버튼*/
+.PB_105_NIA ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/pay_pay_bt_285x280_hc.png) !important; color: #AFAFB0 !important; }
+.PB_105_NIA ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/pay_pay_bt_285x280_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 모바일쿠폰 버튼*/
+.PB_105_mobile ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/pay_m_coupon_bt_285x280_hc.png) !important; color: #AFAFB0 !important; }
+.PB_105_mobile ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/pay_m_coupon_bt_285x280_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 바코드할인 버튼*/
+.PB_105_barcode ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/pay_barcode_bt_285x280_hc.png) !important; color: #AFAFB0 !important; }
+.PB_105_barcode ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/pay_barcode_bt_285x280_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 기프트카드 버튼*/
+.PB_105_gift ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/pay_giftcard_bt_285x280_hc.png) !important; color: #AFAFB0 !important; }
+.PB_105_gift ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/pay_giftcard_bt_285x280_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 마이너스버튼 */
+.PB_105_minus ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/minus_bt_DG_42x80_hc.png) !important; }
+.PB_105_minus ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/minus_bt_DG_42x80_o_hc.png) !important; }
+
+/* 플러스버튼 */
+.PB_105_plus ._xf_btn_image {background-image: url(/project/image/BIZ/102/05/PUB/plus_bt_DG_42x80_hc.png) !important; }
+.PB_105_plus ._xf_btn_image:active {background-image: url(/project/image/BIZ/102/05/PUB/plus_bt_DG_42x80_o_hc.png) !important; }
+
+
+/* 음식점 끝 */
+
+
+/* 무인발권기 시작 */
+
+/*상단 타이틀 로고*/
+.PB_106_title ._xf_btn_image{background-image: url(/project/image/BIZ/103/06/PUB/logo_train_hc.png) !important;}
+
+/* 현장 승차권 발권 버튼 */
+.PB_106_Soo_0 ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_menu1_hc.png) !important; }
+.PB_106_Soo_0 ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_menu1_o_hc.png) !important; }
+
+/* 현장 승차권 발권 버튼 */
+.PB_106_Soo_1 ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_menu2_hc.png) !important; }
+.PB_106_Soo_1 ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_menu2_o_hc.png) !important; }
+
+/* 현장 승차권 발권 버튼 */
+.PB_106_Soo_2 ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_menu3_hc.png) !important; }
+.PB_106_Soo_2 ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_menu3_o_hc.png) !important; }
+
+/* 탭아이템 색상 */
+.PN_106_G ._xf_panel_content { background-color: #000000 !important; }
+.PN_106_T ._xf_panel_content { background-color: #000000 !important; border-color :  #FFFFFF !important; }
+
+/* 특실 버튼 */
+.PB_106_train_1 ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_level1_hc.png) !important; color: #FFFFFF !important; }
+.PB_106_train_1 ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_level1_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 일반실 발권 버튼 */
+.PB_106_train_2 ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_level2_hc.png) !important; color: #FFFFFF !important; }
+.PB_106_train_2 ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_level2_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 입석 버튼 */
+.PB_106_train_3 ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_level3_hc.png) !important; color: #FFFFFF !important; }
+.PB_106_train_3 ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/train_bt_level3_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 도착지 버튼 */
+.PB_106_des ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_W_225x120_hc.png) !important;  color: #FFFFFF !important; }
+.PB_106_des ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_W_225x120_o_hc.png) !important; }
+
+/* 이전페이지 버튼 */
+.PB_106_pre ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/pre_bt_G_275x80_hc.png) !important;  color: #FFFFFF !important; }
+.PB_106_pre ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/pre_bt_G_275x80_o-1_hc.png) !important; color: #FFFFFF !important; }
+
+/* 다음페이지 버튼 */
+.PB_106_next ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/next_bt_W__275x80_hc.png) !important;  color: #FFFFFF !important; }
+.PB_106_next ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/next_bt_G_275x80_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 초성검색예시패널 */
+.PN_106_num ._xf_panel_content {background-image: url(/project/image/BIZ/103/06/PUB/num_box_940x95_hc.png) !important; }
+
+/* 초성 버튼 */
+.PB_106_ini ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/num_bt_W_80x100_hc.png) !important;  color: #FFFFFF !important; }
+.PB_106_ini ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/num_bt_W_80x100_o_hc.png) !important; color: #FFFFFF !important; }
+
+/*지우기 버튼 */
+.PB_106_clear ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/key_del_bt_G_200x65_hc.png) !important;  color: #FFFFFF !important; }
+.PB_106_clear ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/key_del_bt_G_200x65_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* 패널라인 */
+.PN_106_line ._xf_panel_outer_content_wrapper  {border-top-color: #FFFFFF !important;  }
+
+/* 이전페이지 버튼 */
+.PB_106_pre_1 ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/pre_bt_G_275x80_hc.png) !important;  color: #FFFFFF !important; }
+.PB_106_pre_1 ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/pre_bt_G_275x80_o-1_hc.png) !important; color: #FFFFFF !important; }
+
+/* 다음페이지 버튼 */
+.PB_106_next_1 ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/next_bt_W__275x80_hc.png) !important;  color: #FFFFFF !important; }
+.PB_106_next_1 ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/next_bt_G_275x80_o_hc.png) !important; color: #FFFFFF !important; }
+
+/* +/- 패널  */
+.PN_106_box ._xf_panel_content {background-image: url(/project/image/BIZ/103/06/PUB/menulist_numbox_bg_hc.png) !important; }
+
+/* - 버튼 */
+.PB_106_minus ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/minus_bt_100x100_hc.png) !important; }
+.PB_106_minus ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/minus_bt_100x100_o_hc.png) !important; }
+
+/* + 버튼 */
+.PB_106_plus ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/plus_bt_100x100_hc.png) !important; }
+.PB_106_plus ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/plus_bt_100x100_o_hc.png) !important; }
+
+/* 취소버튼 */
+.PB_106_can ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_G_250x105_hc.png) !important; }
+.PB_106_can ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_G_250x100_o_hc.png) !important; }
+
+/* 주문하기 버튼 */
+.PB_106_ord ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_B_250x216_hc.png) !important; }
+.PB_106_ord ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_B_250x216_o_hc.png) !important; }
+
+/* 출발시간 패널  */
+.PN_106_time ._xf_panel_content {background-image: url(/project/image/BIZ/103/06/PUB/table_box_960x1050_hc.png) !important; }
+
+/* 선택 버튼 */
+.PB_106_choice ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_Wline_bt_140x80_hc.png) !important; color: #FFFFFF !important; }
+.PB_106_choice ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_Wline_bt_140x80_o_hc.png) !important; color: #FFFFFF !important; }
+
+
+/* < 버튼 */
+.PB_106_R ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/pre_bt_G_80x80_hc.png) !important;   }
+.PB_106_R ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/pre_bt_G_80x80_o_hc.png) !important;  }
+
+/* > 버튼 */
+.PB_106_L ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/next_bt_G_80x80_hc.png) !important;   }
+.PB_106_L ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/next_bt_G_80x80_o_hc.png) !important;  }
+
+/* 좌석 버튼 */
+.PB_106_seat ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_Wline_bt_300x115_hc.png) !important;   color: #FFFFFF !important; }
+.PB_106_seat ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_Wline_bt_300x115_o_hc.png) !important;  color: #FFFFFF !important; }
+
+/* 패널색 흰검 */
+.PN_106_WB ._xf_panel_content { background-color: #0A0A0A !important; }
+
+/* 패널색 파노 */
+.PN_106_BY ._xf_panel_content { background-color: #FFD112 !important; }
+
+/* 운임요금 버튼 */
+.PB_106_fre ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_W_175x70_hc.png) !important;   color: #FFFFFF !important; }
+.PB_106_fre ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_W_175x70_o_hc.png) !important;  color: #FFFFFF !important; }
+
+/* 확대 버튼 */
+.PB_106_exp ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/zoomin_bt_DG_230x80_hc.png) !important;   color: #FFFFFF !important; }
+.PB_106_exp ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/zoomin_bt_DG_230x80_o_hc.png) !important;  color: #FFFFFF !important; }
+
+/* 축소 버튼 */
+.PB_106_shr ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/zoomout_bt_DG_230x80_hc.png) !important;   color: #FFFFFF !important; }
+.PB_106_shr ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/zoomout_bt_DG_230x80_o_hc.png) !important;  color: #FFFFFF !important; }
+
+/* ^ 버튼 */
+.PB_106_u ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/map_move_up_bt_W_60_hc.png) !important;}
+.PB_106_u ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/map_move_up_bt_W_60_o_hc.png) !important;}
+
+/* ▽ 버튼 */
+.PB_106_d ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/map_move_down_bt_W_60_hc.png) !important;}
+.PB_106_d ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/map_move_down_bt_W_60_o_hc.png) !important;}
+
+/* < 버튼 */
+.PB_106_l ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/map_move_left_bt_W_60_hc.png) !important;}
+.PB_106_l ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/map_move_left_bt_W_60_o_hc.png) !important;}
+
+/* > 버튼 */
+.PB_106_r ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/map_move_right_bt_W_60_hc.png) !important;}
+.PB_106_r ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/map_move_right_bt_W_60_o_hc.png) !important;}
+
+/* pop 버튼 */
+.PB_106_pop ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB//BIZ/103/06/PUB/bin_Wline_bt_200x125.png) !important; color: #FFFFFF !important; }
+.PB_106_pop ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_Wline_bt_200x125_o_hc.png) !important; color: #FFFFFF !important; }
+
+
+/* pop 패널 */
+.PN_106_pop_1 ._xf_panel_content {background-image: url(/project/image/BIZ/103/06/PUB/table_box_685x600_hc.png) !important; }
+
+/* map 버튼 */
+.PB_106_map ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/img_location_hc.png) !important; color: #FFFFFF !important; }
+
+/* table 패널 */
+.PN_106_table ._xf_panel_content {background-image: url(/project/image/BIZ/103/06/PUB/table_G_960x430_hc.png) !important; }
+
+
+/* 아이콘 패널 */
+.PN_106_w ._xf_panel_content {background-image: url(/project/image/BIZ/103/06/PUB/pay_giftcard_sub_ico_hc.png) !important; }
+
+/* 아이콘 패널 */
+.PN_106_A ._xf_panel_content {background-image: url(/project/image/BIZ/103/06/PUB/logo_train_G_hc.png) !important; }
+
+.TX_106_B {color: #FFFFFF !important;} 
+
+/* 확인 버튼 */
+.PB_106_click ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_B_320x120_hc.png) !important; color: #FFFFFF !important; }
+.PB_106_click ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_B_320x120_o_hc.png) !important; color: #FFFFFF !important; } 
+
+/* 취소 버튼 */
+.PB_106_c ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_B_320x120_hc.png) !important; color: #FFFFFF !important; }
+.PB_106_c ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_B_320x120_o_hc.png) !important; color: #FFFFFF !important; } 
+
+/* 출발일 버튼 */
+.PB_106_str ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_G_90x90_hc.png) !important; }
+.PB_106_str ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_bt_G_90x90_today_hc.png) !important;  } 
+
+/* 순방향  */
+.PN_106_AB ._xf_panel_content {background-image: url(/project/image/BIZ/103/06/PUB/seat_img1-1_hc.png) !important;  }
+
+/* 역방향 */
+.PN_106_BA ._xf_panel_content {background-image: url(/project/image/BIZ/103/06/PUB/seat_direction_img_r_hc.png) !important; }
+
+/* 열차종류 버튼 */
+.PB_106_train ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_Wline_bt_400x400_hc.png) !important; color: #FFFFFF !important; }
+.PB_106_train ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_Wline_bt_400x400_o_hc.png) !important; color: #FFFFFF !important; } 
+
+/* 출발시간대 버튼 */
+.PB_106_te ._xf_btn_image {background-image: url(/project/image/BIZ/103/06/PUB/bin_Wline_bt_160x90_hc.png) !important; color: #AFAFB0 !important; }
+.PB_106_te ._xf_btn_image:active {background-image: url(/project/image/BIZ/103/06/PUB/bin_Wline_bt_160x90_o_hc.png) !important; color: #FFFFFF !important; } 
+
+/* 무인발권기 끝 */
+
+/* 푸드코트 시작 */
+
+/*스탭바*/
+.PN_107_stepBar_1 ._xf_panel_content {background-image: url(/project/image/BIZ/102/06/comn_4step_R_bar_1_hc.png) !important; background-color: transparent !important;}
+.PN_107_stepBar_2 ._xf_panel_content {background-image: url(/project/image/BIZ/102/06/comn_4step_R_bar_2_hc.png) !important; background-color: transparent !important;}
+.PN_107_stepBar_3 ._xf_panel_content {background-image: url(/project/image/BIZ/102/06/comn_4step_R_bar_3_hc.png) !important; background-color: transparent !important;}
+.PN_107_stepBar_4 ._xf_panel_content {background-image: url(/project/image/BIZ/102/06/comn_4step_R_bar_4_hc.png) !important; background-color: transparent !important;}
+
+.PB_107_type1 ._xf_btn_image {background-image: url(/project/image/BIZ/102/06/food_bt_type1_hc.png) !important;color: #FFFFFF !important;}
+.PB_107_type2 ._xf_btn_image {background-image: url(/project/image/BIZ/102/06/food_bt_type2_hc.png) !important;color: #FFFFFF !important;}
+.PB_107_type3 ._xf_btn_image {background-image: url(/project/image/BIZ/102/06/food_bt_type3_o_hc.png) !important;color: #FFFFFF !important;}
+.PB_107_type4 ._xf_btn_image {background-image: url(/project/image/BIZ/102/06/food_bt_type4_hc.png) !important;color: #FFFFFF !important;}
+
+.PB_107_type1:active ._xf_btn_image {background-image: url(/project/image/BIZ/102/06/food_bt_type1_o_hc.png) !important;}
+.PB_107_type2:active ._xf_btn_image {background-image: url(/project/image/BIZ/102/06/food_bt_type2_o_hc.png) !important;}
+.PB_107_type3:active ._xf_btn_image {background-image: url(/project/image/BIZ/102/06/food_bt_type3_o-1_hc.png) !important;}
+.PB_107_type4:active ._xf_btn_image {background-image: url(/project/image/BIZ/102/06/food_bt_type4_o_hc.png) !important;}
+
+
+.PN_107_bgG ._xf_panel_content{background-color: #202020 !important;}
+.PN_107_bgG10 ._xf_panel_content{background-color: #101010 !important;}
+
+/* 무인발권기(버스) 시작 */
+.PB_109_day ._xf_btn_image{background-image: url(/project/image/BIZ/103/09/bin_bt_HC_90x90.png) !important; color:#ffffff;}
+.PB_109_day:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/09/bin_bt_HC_90x90_o.png) !important; color:#ffffff;}
+.PB_109_today ._xf_btn_image{background-image: url(/project/image/BIZ/103/09/bin_bt_HC_90x90_hc.png) !important; color:#ffffff;}
+.PB_109_today:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/09/bin_bt_HC_90x90_o_hc.png) !important; color:#ffffff;}
+
+.PN_109_timeBack ._xf_panel_content{background-image: url(/project/image/BIZ/103/09/table_box_960x1050_hc.png) !important;}
+.PN_109_totalBack ._xf_panel_content{background-image: url(/project/image/BIZ/103/09/table_HC_960x430.png) !important;}
+
+
+
+/* 셀프체크인(숙박) 시작 */
+.PN_110_stepBar_1 ._xf_panel_content {background-image: url(/project/image/BIZ/103/10/comn_3_step_bar_1.png) !important;}
+.PN_110_stepBar_2 ._xf_panel_content {background-image: url(/project/image/BIZ/103/10/comn_3_step_bar_2.png) !important;}
+.PN_110_stepBar_3 ._xf_panel_content {background-image: url(/project/image/BIZ/103/10/comn_3_step_bar_3.png) !important;}
+
+.PB_110_checkin ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/hotel_bt_menu1_hc.png) !important;}
+.PB_110_checkin:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/hotel_bt_menu1_o_hc.png) !important;}
+.PB_110_checkout ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/hotel_bt_menu2_hc.png) !important;}
+.PB_110_checkout:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/hotel_bt_menu2_o_hc.png) !important;}
+
+.PB_110_checkNum ._xf_btn_image{background-image: url(/project/image/BIZ/103/10/hotel_bt_1_hc.png) !important; color:#ffffff;}
+.PB_110_checkPhone ._xf_btn_image{background-image: url(/project/image/BIZ/103/10/hotel_bt_2_hc.png) !important; color:#ffffff;}
+.PB_110_checkQr ._xf_btn_image{background-image: url(/project/image/BIZ/103/10/hotel_bt_3_hc.png) !important; color:#ffffff;}
+
+.PB_110_checkNum:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/10/hotel_bt_1_o_hc.png) !important; }
+.PB_110_checkPhone:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/10/hotel_bt_2_o_hc.png) !important;}
+.PB_110_checkQr:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/10/hotel_bt_3_o_hc.png) !important;}
+
+.PN_110_numBack ._xf_text{background-image:url(/project/image/BIZ/103/10/num_box_135_hc.png) !important; color:#ffffff;}
+.PB_110_numBack ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/num_bt_HC_190x130.png)!important ; color:#ffffff;}
+.PB_110_delBack ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/num_del_bt_HC_190x130.png)!important ; color:#ffffff;}
+.PB_110_numBack:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/num_bt_HC_190x130_o.png)!important ; color:#ffffff;}
+.PB_110_delBack:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/num_del_bt_HC_190x130-1.png)!important ; color:#ffffff;}
+.PB_110_conf ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/bin_bt_HC_600x125.png) !important;}
+.PB_110_conf:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/bin_bt_HC_600x125_o.png) !important;}
+
+.PB_110_upBtn ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/up_bt_HC_250x100.png) !important;}
+.PB_110_upBtn:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/up_bt_HC_250x100_o.png) !important;}
+
+.PB_110_downBtn ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/dwn_bt_HC_250x100.png) !important;}
+.PB_110_downBtn:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/dwn_bt_HC_250x100_o.png) !important;}
+
+.PB_110_walkBtn ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/bin_bt_HC_320x120.png) !important;}
+.PB_110_walkBtn:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/10/bin_bt_HC_320x120-1.png) !important;}
+
+.PN_110_logoG ._xf_panel_content{background-image: url(/project/image/BIZ/103/10/logo_hotel_G.png) !important;}
+
+
+/* 중고휴대폰판매기 시작 */
+.PN_111_stepBar1 ._xf_panel_content{background-image:url(/project/image/BIZ/103/11/comn_5_step_bar_1_hc.png) !important; background-color:transparent !important;}
+.PN_111_stepBar2 ._xf_panel_content{background-image:url(/project/image/BIZ/103/11/comn_5_step_bar_2_hc.png) !important; background-color:transparent !important;}
+.PN_111_stepBar3 ._xf_panel_content{background-image:url(/project/image/BIZ/103/11/comn_5_step_bar_3_hc.png) !important; background-color:transparent !important;}
+.PN_111_stepBar4 ._xf_panel_content{background-image:url(/project/image/BIZ/103/11/comn_5step_B_bar_4_hc.png) !important; background-color:transparent !important;}
+.PN_111_stepBar5 ._xf_panel_content{background-image:url(/project/image/BIZ/103/11/comn_5step_B_bar_5_hc.png) !important; background-color:transparent !important;}
+
+.PB_111_nextBtn ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/bin_bt_HC_600x125.png) !important;}
+.PB_111_nextBtn:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/bin_bt_HC_600x125_o_hc.png) !important;}
+
+.PB_111_smartP ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/phone_bt_1_hc.png) !important; color:#ffffff;}
+.PB_111_smartP:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/phone_bt_1_o_hc.png) !important; color:#ffffff;}
+
+.PB_111_normalP ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/phone_bt_2_hc.png) !important;color:#ffffff;}
+.PB_111_normalP:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/phone_bt_2_o_hc.png) !important;color:#ffffff;}
+
+.PB_111_android ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/phone_bt_3_hc.png) !important;color:#ffffff; }
+.PB_111_android:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/phone_bt_3_o_hc.png) !important;color:#ffffff; }
+
+.PB_111_iphone ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/phone_bt_4_hc.png) !important;color:#ffffff; }
+.PB_111_iphone:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/phone_bt_4_o_hc.png) !important;color:#ffffff; }
+
+.PN_111_bBack ._xf_panel_content{background-image:url(/project/image/BIZ/103/11/box_930x830_hc.png) !important;}
+.PN_111_tBack ._xf_panel_content{background-image:url(/project/image/BIZ/103/11/table_G_960x430_hc.png) !important;}
+.PN_111_tbBack ._xf_panel_content{background-image:url(/project/image/BIZ/103/11/table_B_960x205_hc.png) !important;}
+
+.PN_111_pBack ._xf_panel_content{background-image:url(/project/image/BIZ/103/11/num_box_740x135_hc.png) !important;}
+.PB_111_pnum ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/num_bt_HC_190x130.png) !important; color: #ffffff;}
+.PB_111_pnum:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/num_bt_HC_190x130_o_hc.png) !important;}
+.PB_111_pdnum ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/num_del_bt_HC_190x130.png) !important;color: #ffffff;}
+.PB_111_pdnum:active ._xf_btn_image{background-image:url(/project/image/BIZ/103/11/num_del_bt_HC_190x130_o.png) !important;}
+
+/* 입장권발매기(박물관) 시작 */
+
+.PB_112_online ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/sports_bt_menu1_hc.png) !important;}
+.PB_112_offline ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/sports_bt_menu2_hc.png) !important;}
+.PB_112_online:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12sports_bt_menu1_o_hc.png) !important;}
+.PB_112_offline:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/sports_bt_menu2_o_hc.png) !important;}
+
+.PB_112_progBack ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/list_320x530_hc.png) !important;}
+.PB_112_progBack:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/list_320x530_o_hc.png) !important;}
+
+.PB_112_preBtn ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/pre_bt_G_275x100_hc.png) !important; color:#ffffff;}
+.PB_112_preBtn:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/pre_bt_G_275x100-1_hc.png) !important;}
+.PB_112_nextBtn ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/next_bt_G_275x100_hc.png) !important;color:#ffffff;}
+.PB_112_nextBtn:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/next_bt_G_275x100-1_hc.png) !important;}
+
+.PN_112_title ._xf_panel_content{background-image: url(/project/image/BIZ/103/12/bg_1000x356_hc.png) !important;}
+.PB_112_timeBack ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/bin_bt_HC_295x180_hc.png) !important; color:#ffffff;}
+.PB_112_timeBack:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/bin_bt_HC_295x180_o_hc.png) !important; color:#ffffff;}
+
+.PN_112_numBack ._xf_panel_content{background-image: url(/project/image/BIZ/103/12/menulist_numbox_bg_hc.png) !important;}
+.PB_112_minBtn ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/minus_bt_100x100_hc.png) !important;}
+.PB_112_plusBtn ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/plus_bt_100x100_hc.png) !important;}
+.PB_112_minBtn:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/minus_bt_100x100-1_hc.png) !important;}
+.PB_112_plusBtn:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/plus_bt_100x100-1_hc.png) !important;}
+.PB_112_cancle ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/bin_bt_HC_250x105_hc.png) !important;}
+.PB_112_next ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/bin_bt_HC_250x216_hc.png) !important;}
+.PB_112_cancle:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/bin_bt_HC_250x105_o_hc.png) !important;}
+.PB_112_next:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/bin_bt_HC_250x216_o_hc.png) !important;}
+
+.PN_112_panel960300 ._xf_panel_content{background-image: url(/project/image/BIZ/103/12/table_G_960x300_hc.png) !important;}
+.PN_112_panel960205 ._xf_panel_content{background-image: url(/project/image/BIZ/103/12/table_B_960x205_hc.png) !important;}
+.PB_112_payBtn ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/bin_bt_HC_600x125_hc.png) !important;}
+.PB_112_payBtn:active ._xf_btn_image{background-image: url(/project/image/BIZ/103/12/bin_bt_HC_600x125_o_hc.png) !important;}
+
+.PN_112_logoG ._xf_panel_content{background-image: url(/project/image/BIZ/103/12/logo_museum_HC.png) !important;}
+
+
+/* 일반 */
+.el_test {background-color: #000000 !important;color: #FFFFFF !important;}
+/** 키오스크 - 유통 - 무인결제 (101-03) **/
+.el_topSub ._xf_panel_content {background-color: #000000 !important;}
+/** 미들패널 **/
+.el_middle ._xf_panel_content {background-image: linear-gradient(rgb(57, 61, 69) 0%, rgb(21, 23, 33) 100%) !important;}
+/** 미들탑텍스트 **/
+.el_middle .el_middleTopText {color: #FFFFFF !important;}
+
+/** 키오스크 - 유통 - 무인결제 (101-03) **/
+/* 시작하기버튼 */
+.k10103_start_button, .k10103_start_button:focus, .k10103_start_button:active:focus {box-shadow: inset 0px 3px 3px #FFFFFF4D, 0px 10px 8px #0000004D;}
+
+/* 하단버튼 */
+.k10103_bottom_button, .k10103_bottom_button:focus, .k10103_bottom_button:active:focus {box-shadow: inset 0px 2px 3px #FFFFFF66, 0px 5px 6px #0000004D;letter-spacing: -2.1px;}
+
+/* 결제하기버튼 */
+.k10103_pay_button, .k10103_pay_button:focus, .k10103_pay_button:active:focus {box-shadow: inset 0px 3px 3px #FFFFFF4D, 0px 10px 8px #0000004D;}
+
+/* +-버튼 */
+.k10103_sign_button, .k10103_sign_button:focus, .k10103_sign_button:active:focus {box-shadow: inset 0px 2px 3px #FFFFFF66, 0px 5px 6px #0000004D;}
+
+/* 결제종류버튼 */
+.k10103_paykind_button, .k10103_paykind_button:focus, .k10103_paykind_button:active:focus {box-shadow: 0px 3px 6px #00000029;}
+
+/* 전화번호버튼 */
+.k10103_phone_button, .k10103_phone_button:focus, .k10103_phone_button:active:focus {box-shadow: inset 0px 2px 3px #FFFFFF66, 0px 3px 6px #00000026;}
+
+
+/** Initialize **/
+/* html > body {overflow:hidden !important;} 
+._xf_screen_selectbox_combobox, ._xf_chk, ._xf_rdo, ._xf_date_edit
+._xf_btn:active:focus, ._xf_btn:focus {box-shadow:none !important;}
+*/
+/** Browser Scrollbar Style **/
+::-webkit-scrollbar {width:12px !important;height:12px !important;}
+::-webkit-scrollbar-button {width:0 !important;height:0 !important;}
+::-webkit-scrollbar-button:start {}
+::-webkit-scrollbar-button:end {}
+::-webkit-scrollbar-button:vertical:increment {}
+::-webkit-scrollbar-button:vertical:decrement {}
+::-webkit-scrollbar-track {border:1px solid #FFF;border-radius:10px !important;background-color:#F2F2F2 !important;}
+::-webkit-scrollbar-track-piece {}
+::-webkit-scrollbar-thumb {border:1px solid #FFF;border-radius:10px !important;background-color:#CDCDCD !important;}
+::-webkit-scrollbar-thumb:hover {background-color:#AFAFAF !important;}
+::-webkit-scrollbar-thumb:active {background-color:#878888 !important;}
+::-webkit-scrollbar-corner {}
+::-webkit-resizer {}
+
+/** LnB Scrollbar Style **/
+.nhmk_lnb_navi::-webkit-scrollbar {width:6px !important;height:6px !important;}
+.nhmk_lnb_navi::-webkit-scrollbar-button {width:0 !important;height:0 !important;}
+.nhmk_lnb_navi::-webkit-scrollbar-button:start {}
+.nhmk_lnb_navi::-webkit-scrollbar-button:end {}
+.nhmk_lnb_navi::-webkit-scrollbar-button:vertical:increment {}
+.nhmk_lnb_navi::-webkit-scrollbar-button:vertical:decrement {}
+.nhmk_lnb_navi::-webkit-scrollbar-track {border:none;border-radius:10px !important;background-color:#536279 !important;}
+.nhmk_lnb_navi::-webkit-scrollbar-track-piece {}
+.nhmk_lnb_navi::-webkit-scrollbar-thumb {border:none;border-radius:10px !important;background-color:#72839e  !important;}
+.nhmk_lnb_navi::-webkit-scrollbar-thumb:hover {background-color:#8897ae !important;}
+.nhmk_lnb_navi::-webkit-scrollbar-thumb:active {background-color: #8897ae !important;}
+.nhmk_lnb_navi::-webkit-scrollbar-corner {}
+.nhmk_lnb_navi::-webkit-resizer {}
+
+/** Grid Scrollbar Style **/
+._xf_scroll_hole {background-color:#FFFFFF !important;}
+._xf_hscroll {height:10px !important;border-radius:10px !important;}
+._xf_vscroll {width:10px !important;border-radius:10px !important;}
+._xf_scroll_bar {border:none !important;}
+._xf_scroll_bar._xf_hscroll_bar {top:0 !important;height:100% !important;}
+._xf_scroll_bar._xf_vscroll_bar {left:0 !important;width:100% !important;}
+._xf_scroll_bar_image._xf_hscroll_bar_image, ._xf_scroll_bar_image._xf_vscroll_bar_image {background-image:none !important;border-radius:10px !important;background-color:#CDCDCD !important;}
+._xf_scroll_bar_image._xf_hscroll_bar_image:hover, ._xf_scroll_bar_image._xf_vscroll_bar_image:hover {background-color:#AFAFAF !important;}
+._xf_scroll_bar_image._xf_hscroll_bar_image:active, ._xf_scroll_bar_image._xf_vscroll_bar_image:active {background-color:#878888 !important;}
+
+/** SearchPop Grid Scrollbar Style **/
+.nhmk_srchpop ._xf_vscroll {width:6px !important;border-radius:10px !important;background-color:#536279 !important;}
+.nhmk_srchpop ._xf_vscroll_top_button, .nhmk_srchpop ._xf_vscroll_bottom_button {background-image:none !important;background-color:#464f5e !important;}
+.nhmk_srchpop ._xf_vscroll_bar {left:0 !important;width:100% !important;background:none !important;}
+.nhmk_srchpop ._xf_vscroll_bar_image {background-image:none !important;border-radius:10px !important;background-color:#72839e !important;}
+.nhmk_srchpop ._xf_vscroll_bar_image:hover, .nhmk_srchpop ._xf_vscroll_bar_image:active {background-color:#8897ae !important;}
+.nhmk_srchpop ._xf_scroll_hole {display:none !important;}
+
+/** Common Style **/
+/* required 
+.nhmk_input[required], .nhmk_combo[required], .nhmk_textarea[required],
+.nhmk_datepicker[required] {background:#fdf4ea url("../../project_Nh/image/SYS/MODULE/ico_inp_req.png") 1px 1px no-repeat !important;}
+.nhmk_datepicker[required] + ._xf_date_button {background-image:url("../../project_Nh/image/SYS/MODULE/ico_datepicker_cal_required.png") !important;}
+.nhmk_radio._xf_rdo_on[required] {background-image:url("../../project_Nh/image/SYS/MODULE/ico_radio_on_req.png") !important;}
+.nhmk_radio._xf_rdo_off[required] {background-image:url("../../project_Nh/image/SYS/MODULE/ico_radio_off_req.png") !important;}
+.nhmk_checkbox._xf_chk_on[required] {background-image:url("../../project_Nh/image/SYS/MODULE/ico_check_on_req.png") !important;}
+.nhmk_checkbox._xf_chk_off[required] {background-image:url("../../project_Nh/image/SYS/MODULE/ico_check_off_req.png") !important;}
+.nhmk_radio_group._xf_radiogroup_item_selected[required] {background-image:url("../../project_Nh/image/SYS/MODULE/ico_radio_on_req.png") !important;}
+.nhmk_radio_group[required] {background-image:url("../../project_Nh/image/SYS/MODULE/ico_radio_off_req.png") !important;}
+*/
+
+/* placeholder */
+.nhmk_input::placeholder, .nhmk_combo::placeholder, .nhmk_textarea::placeholder,
+.nhmk_datepicker::placeholder {color: #999999 !important;}
+
+/** PopUp 
+._xf_modalbox_background, ._xf_popupbox_background {background-color:#000000 !important;background-image:none !important;opacity:0.5;}
+._xf_modalbox._xf_modalbox_messagebox {border:none !important;width:auto !important;max-width:600px !important;min-width:400px !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_modalbox_titlebar {padding-left:20px !important;height:36px !important;border-bottom:none !important;background-color:#1c63d9 !important;background-image:none !important;-webkit-box-shadow:none !important;box-shadow:none !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_modalbox_titlebar_text {height:36px !important;font-family: "Noto Sans CJK KR" !important;font-size:11pt !important;font-weight:500 !important;color:#FFFFFF !important;line-height:36px !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_modalbox_content {padding:30px 30px 20px 30px !important;width:auto !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox {width:auto !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_content {padding-left:50px !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_icon {width:40px !important;height:40px !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_icon_info {background-position:0 0 !important;background-image:url("../../project_Nh/image/SYS/MODULE/ico_info_message.png") !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_icon_question {background-position:0 0 !important;background-image:url("../../project_Nh/image/SYS/MODULE/ico_confirm_message.png") !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_icon_error {background-position:0 0 !important;background-image:url("../../project_Nh/image/SYS/MODULE/ico_caution_message.png") !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_msg_tablebox {min-height:40px !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_msg_tablecell {font-family: "Noto Sans CJK KR" !important;font-weight:400 !important;font-size:10pt !important;color:#555555;line-height:16px;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_btnbox {margin-top:20px !important;height:24px !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_btn {padding:0 14px !important;min-width:80px !important;width:auto !important;height: 24px !important;border:none !important;border-radius:5px !important;background-color:#464951 !important;font-family: "Noto Sans CJK KR" !important;font-size:9pt !important;font-weight:500 !important;color:#FFFFFF !important;box-shadow:none !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_btn:hover {background-color:#2F3238 !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_btn._xf_popup_msgbox_btn_margin_both,
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_btn._xf_popup_msgbox_btn_margin_left {border:1px solid #A8AAB0 !important;background-color:#FFFFFF !important;color:#333333 !important;}
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_btn._xf_popup_msgbox_btn_margin_both:hover,
+._xf_modalbox._xf_modalbox_messagebox ._xf_popup_msgbox_btn._xf_popup_msgbox_btn_margin_left:hover {border:1px solid #5E5E5E !important;background-color:#FFFFFF !important;color:#333333 !important;}
+**/
+/** ComboBox 
+.nhmk_combo {padding-right:21px !important;}
+._xf_screen_selectbox_combobox {border:1px solid #BCBCBC !important;}
+._xf_screen_selectbox_combobox ._xf_screen_selectbox_item:hover {background:#EDEDED !important;color:#555555 !important;}
+._xf_screen_selectbox_combobox ._xf_screen_selectbox_item_checkbox {width:15px !important;background-image: url("../../project_Nh/image/SYS/MODULE/ico_gcomb_check.png") !important;}**/
+._xf_screen_selectbox_combobox ._xf_screen_selectbox_item_checkbox_checked  {background-position:-15px center !important;}
+._xf_screen_selectbox_combobox ._xf_screen_selectbox_fix {background:#FFFFFF !important;color:#555555 !important;}
+._xf_screen_selectbox_combobox ._xf_screen_selectbox_view ._xf_screen_selectbox_item {padding-right:5px !important;border-bottom:none !important;}
+._xf_screen_selectbox_combobox ._xf_screen_selectbox_view ._xf_screen_selectbox_item_selected {background:#489EE7 !important;color:#FFFFFF !important;}
+
+/** DatePicker 
+._xf_calendar {border:1px solid #D3D3D3 !important;border-radius:0 !important;box-shadow:none !important;}
+._xf_calendar_navigation_table {height:29px !important;background:#364D80 !important;}
+._xf_calendar_navigation_table_large {top:0 !important;}
+._xf_calendar_navigation_table_small {top:0 !important;}
+._xf_calendar_navi_button {background-color:transparent !important;}
+._xf_calendar_prev_year {background-image: url("../../project_Nh/image/SYS/MODULE/btn_cal_year_prev.png") !important;}
+._xf_calendar_prev_month {background-image: url("../../project_Nh/image/SYS/MODULE/btn_cal_month_prev.png") !important;}
+._xf_calendar_next_year {background-image: url("../../project_Nh/image/SYS/MODULE/btn_cal_year_next.png") !important;}
+._xf_calendar_next_month {background-image: url("../../project_Nh/image/SYS/MODULE/btn_cal_month_next.png") !important;}
+._xf_calendar_month_button, ._xf_calendar_year_button {background-image: url("../../project_Nh/image/SYS/MODULE/btn_cal_combo.png") !important;}
+._xf_calendar_curr_month, ._xf_calendar_curr_year {border:none !important;background:transparent !important;color:#FFFFFF !important;}
+._xf_calendar_year_box, ._xf_calendar_month_box {border:1px solid #526898 !important;background:#364D80 !important;}
+._xf_calendar_year_item, ._xf_calendar_month_item {border-bottom:1px solid #526898 !important;background:#364D80 !important;}
+._xf_calendar_year_item._xf_calendar_year_selected, ._xf_calendar_month_item._xf_calendar_month_selected {background:#489EE7 !important;}
+._xf_calendar_content_padtop_large {padding-top:29px !important;}
+._xf_calendar_td, ._xf_calendar_th {border:none !important;}
+._xf_calendar_th {background:#364D80 !important;color:#FFFFFF !important;font-weight:400 !important;}
+._xf_calendar_th._xf_calendar_sunday {color:#FE5B4F !important;}
+._xf_calendar_th._xf_calendar_saturday {color:#36B9FD !important;}
+**/
+/* index.js에서 스타일 컨트롤
+._xf_calendar_td._xf_calendar_sunday {color:#FE5B4F !important;}
+._xf_calendar_td._xf_calendar_weekday {color:#555555 !important;}
+._xf_calendar_td._xf_calendar_saturday {color:#0078C4 !important;}
+._xf_calendar_td._xf_calendar_holiday {color:#FE5B4F !important;}
+*/
+
+._xf_calendar_td._xf_calendar_curr_date {text-decoration:none !important;background-color:#FF7190 !important;color:#FFFFFF !important;}
+._xf_calendar_td:hover {background-color:#B3BFD5 !important;color:#FFFFFF !important;}
+._xf_calendar_td._xf_calendar_month_selected, ._xf_calendar_td._xf_calendar_select_date,
+._xf_calendar_td._xf_calendar_year_selected {background-color:#489EE7 !important;color:#FFFFFF !important;}
+
+/** Grid, MultiGrid 
+.nhmk_grid ._xf_grid_item_radio {padding-left: 20px !important;}
+.nhmk_grid ._xf_grid_item_radio_on {background-image: url("../../project_Nh/image/SYS/MODULE/ico_radio_on.png") !important;}
+.nhmk_grid ._xf_grid_item_radio_off {background-image: url("../../project_Nh/image/SYS/MODULE/ico_radio_off.png") !important;}
+.nhmk_grid ._xf_grid_item_radio_on_dis {background-image: url("../../project_Nh/image/SYS/MODULE/ico_radio_on_disabled.png") !important;}
+.nhmk_grid ._xf_grid_item_radio_off_dis {background-image: url("../../project_Nh/image/SYS/MODULE/ico_radio_off_disabled.png") !important;}
+**/
+.nhmk_grid_button {margin:0 auto;width:auto;background-color:#FFFFFF;border:1px solid #7FB0FB;color:#2984FD;font-size:12px;font-weight:500;}
+.nhmk_grid_button[disabled] {border:1px solid #D5D5D6 !important;background-color:#F6F6F6;color:#ADACAC;}
+._xf_screen_selectbox_combobox ._xf_screen_selectbox_item_checkbox_checked {background-position:-15px center !important;}
+._xf_grid_fixbar{background-color: rgb(180, 180, 180);}
+._xf_grid_fixbar_column{width:2px;}
+._xf_grid_fixbar_row{height:2px;}
+/** Header **/
+.nhmk_topmenu_panel ._xf_panel_content {white-space:nowrap !important;}
+.nhmk_notification_box {cursor:pointer !important;}
+._xf_menubox {background:transparent !important;box-shadow:none !important;}
+
+/** LNB **/
+.nhmk_lnb > ._xf_tab_item_box > ._xf_tab_item_view > ._xf_tab_item_content  {left:0 !important;}
+.nhmk_lnb ._xf_treemenu_item[data-depth="0"]  {border-bottom:1px solid #44465a !important;}
+.nhmk_lnb ._xf_treemenu_item[data-depth="0"]:first-child  {border-top:1px solid #44465a !important;}
+.nhmk_lnb_tab, .nhmk_lnb_seltab {background-position:center !important;}
+.nhmk_lnb_fav ._xf_grid_tree_row {padding-left:30px !important;}
+
+/** MDI 
+.nhmk_mdi > ._xf_tab_item_box > ._xf_tab_item_view > ._xf_tab_item_content > ._xf_tab_item {background-position:center center !important;}
+.nhmk_mdi > ._xf_tab_panel_box > ._xf_tab_panel > ._xf_tab_panel_content_box_outer > ._xf_tab_panel_content_box_inner {overflow:hidden !important;}
+.nkmk_mditab_lock {background-image: url(../../project_Nh/image/SYS/MODULE/ico_mdi_locked.png) !important;}
+.nkmk_mditab_unlock {background-image: url(../../project_Nh/image/SYS/MODULE/ico_mdi_unlocked.png) !important;}
+.nkmk_mditab_close {background-image: url(../../project_Nh/image/SYS/MODULE/ico_mdi_close.png) !important;}
+.nkmk_mditab_close:hover {background-image: url(../../project_Nh/image/SYS/MODULE/ico_mdi_close.png) !important;}
+**/
+/*._xf_tab_item_navibtn_box {width:52px !important;background:#FFFFFF !important;text-align:right !important;height:32px !important;}
+._xf_tab_item_navibtn_box {width:80px !important;background:#FFFFFF !important;text-align:right !important;height:32px !important;}
+._xf_tab_item_navibtn {width:21px !important;}
+._xf_tab_item_navibtn_prev {margin-right:2px !important;background-image: url("../../project_Nh/image/SYS/MODULE/btn_tab_left.png") !important;}
+._xf_tab_item_navibtn_next {margin-right:28px !important;background-image: url("../../project_Nh/image/SYS/MODULE/btn_tab_right.png") !important;}*/
+/*._xf_tab_item_navibtn_next {margin-right:2px !important;background-image: url("../../project_Nh/image/SYS/MODULE/btn_tab_right.png") !important;}
+._xf_tab_item_navibtn_closeall {margin-right:2px !important;height:32px !important;background-image: url("../../project_Nh/image/SYS/MODULE/btn_tab_allClose.png") !important;}*/
+/** InnerTab02 **/
+.nhmk_innertab02 ._xf_tab_item_title {padding-bottom:1px !important;}
+.nhmk_innertab02.nhmk_innertabsel02 {border-bottom-width:2px !important;border-bottom-color:#333333 !important;}
+.nhmk_innertab02.nhmk_innertabsel02 ._xf_tab_item_title {padding-bottom:0 !important;}
+
+/** MainFrame **/
+.nhmk_check_favorite, .nhmk_check_favorite + div, .nhmk_check_favorite + div + button {vertical-align:bottom !important;}
+
+/** Text컴포넌트 두줄에서 말줄임시 **/
+.nhmk_text_ellipsis2 {display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+
+/** LOADING SPINNER 
+div._xf_protect_ing._xfe_spin {width:110px !important;height:110px !important;animation:none !important;border:none !important;background:url("../../project_Nh/image/SYS/MODULE/loading_spinner.gif")center center no-repeat !important;}
+**/
+/* CodeMirror */
+._code_mirror div{overflow:visible;height:auto;} /* 오현아사원 (레드우드케이) 요청으로 height:auto 추가 By WKY 20221115 */
+
+._xf_portletbox {background:transparent !important;}
+
+._cust_letter_space_m21 {
+  letter-spacing: -2.1px;
+}
+._cust_letter_space_m215 {
+  letter-spacing: -2.15px;
+}
+._cust_letter_space_m225 {
+  letter-spacing: -2.25px;
+}
+._cust_letter_space_m24 {
+  letter-spacing: -2.4px;
+}
+._cust_letter_space_m3 {
+  letter-spacing: -3px;
+}
+._cust_letter_space_m45 {
+  letter-spacing: -4.5px;
+}
+._cust_line_height50 {
+  line-height: 50px;
+}
+._cust_line_height55 {
+  line-height: 55px;
+}
+._cust_line_height80 {
+  line-height: 80px;
+}
+
+._cust_background {
+  background: transparent linear-gradient(180deg, #C7C2BB00 0%, #B0ACA6F7 38%, #3D3C3B 100%) 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
