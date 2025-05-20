@@ -104,63 +104,48 @@ function btn_Acc_on_mouseup(objInst)
 
 function time_on_time(objInst)
 {
-  // 현재 time_txt 값 가져와서 숫자 부분만 추출 후 숫자로 변환
-  var currentTimeStr = this.time_txt.gettext(); // 예: "30초 남음"
-  var currentTime = Number(currentTimeStr.match(/\d+/)[0]); // 숫자만 추출 후 변환
+    // 1. 현재 time_txt 값에서 숫자 부분만 추출 후 숫자로 변환
+    var currentTimeStr = this.time_txt.gettext(); // 예: "30초 남음"
+    var currentTime = Number(currentTimeStr.match(/\d+/)[0]); // 숫자만 추출 후 변환
 
-  // 시간 1 감소 후 다시 설정
-  this.time_txt.settext((currentTime - 1) + "초 남음");
+    // 2. 시간 1초 감소 후 다시 설정
+    this.time_txt.settext((currentTime - 1) + "초 남음");
 
-  // 시간이 1 이하가 되면 타이머 중지 및 텍스트 비활성화
-  if (currentTime <= 1) {
-    // 타이머 중지 및 비활성화
-    this.time.setinterval(0);    // 타이머 중지
-    this.time.setenable(false);  // 타이머 비활성화
-    this.time_txt.setenable(false);   // 텍스트 필드 비활성화
-    this.time_txt.setvisible(false);  // 텍스트 숨김 처리
+    // 3. 시간이 1초 이하가 되면 타이머 중지 및 텍스트 비활성화
+    if (currentTime <= 1) {
+        // 3-1. 타이머 중지 및 비활성화
+        this.time.setinterval(0);    // 타이머 중지
+        this.time.setenable(false);  // 타이머 비활성화
+        this.time_txt.setenable(false);   // 텍스트 필드 비활성화
+        this.time_txt.setvisible(false);  // 텍스트 숨김 처리
 
-    // 이전 화면으로 자동 이동
-    let parentScr = this.screen.getparent();      // 현재 화면의 부모 화면 가져오기
-//    let sld = parentScr.getinstancebyname("SV_Template"); // 슬라이더 인스턴스 가져오기
-    let sld_LP = parentScr.getinstancebyname("SV_Template_LP"); // LP 슬라이더 인스턴스 가져오기
+        // 3-2. 이전 화면으로 자동 이동
+        let parentScr = this.screen.getparent();      // 부모 화면 가져오기
+        let sld_LP = parentScr.getinstancebyname("SV_Template_LP"); // LP 슬라이더 인스턴스 가져오기
 
-    // 다음 화면에서 time 객체 가져오기
-    let nNextIdx_2_LP = sld_LP.getitemfocus() + 1;  // 다음 화면 인덱스 계산
-//    let nNextIdx_2 = sld.getitemfocus() + 1;
+        // 3-3. 다음 화면에서 타이머 객체 가져오기
+        let nNextIdx_2_LP = sld_LP.getitemfocus() + 1;  // 다음 화면 인덱스 계산
+        let oScrBiz_LP = SYSUtil.fn_getBizScreen(this, nNextIdx_2_LP, true);  // 해당 화면 인스턴스 가져오기
 
-//    let oScrBiz = SYSUtil.fn_getBizScreen(this, nNextIdx_2,false);    
-    let oScrBiz_LP = SYSUtil.fn_getBizScreen(this, nNextIdx_2_LP,true);    
+        // 3-4. 다음 화면의 타이머 활성화
+        let objTime_LP = oScrBiz_LP.getmembers().time_1;
+        objTime_LP.setenable(true);  // 다음 화면 타이머 활성화
 
-    // 타이머 객체가 유효한지 확인
-//    let objTime = oScrBiz.getmembers().time_1;
-//        objTime.setenable(true);  // 다음 화면의 타이머 활성화
-	
-    let objTime_LP = oScrBiz_LP.getmembers().time_1;
-        objTime_LP.setenable(true);  // 다음 화면의 타이머 활성화
-	
-	
-	let nNextNextIdx_LP = sld_LP.getitemfocus() + 1;
-	let oScrBizNext_LP = SYSUtil.fn_getBizScreen(this, nNextNextIdx_LP, true); 
-	oScrBizNext_LP.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false); 
-	
-//	let nNextNextIdx = sld.getitemfocus() + 1;
-//	let oScrBizNext = SYSUtil.fn_getBizScreen(this, nNextNextIdx,false); 
-//	oScrBizNext.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false); 
+        // 3-5. 주문 데이터셋 복제
+        let nNextNextIdx_LP = sld_LP.getitemfocus() + 1;
+        let oScrBizNext_LP = SYSUtil.fn_getBizScreen(this, nNextNextIdx_LP, true); 
+        oScrBizNext_LP.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false);  // 주문 데이터 복제
 
+        // 3-6. 타이머와 텍스트 초기화
+        this.time_txt.settext("5초 남음");  // 초기 텍스트로 설정
+        this.time.setinterval(1000);  // 타이머를 1초 간격으로 설정
+        this.time_txt.setenable(true); // 텍스트 필드 활성화
+        this.time_txt.setvisible(true); // 텍스트 보이기
 
-    // 타이머와 텍스트 초기화
-    // 초기값 설정 (예: 30초)
-    this.time_txt.settext("5초 남음");  // 초기 텍스트로 설정
-    this.time.setinterval(1000);  // 타이머 1초 간격으로 설정
-    this.time.setenable(true);  // 타이머 활성화
-    this.time_txt.setenable(true); // 텍스트 필드 활성화
-    this.time_txt.setvisible(true); // 텍스트 보이기
-
-    // 슬라이드 이동: 다음 화면으로
-    sld_LP.setfocus(); 
-//    sld.movenext();  // 슬라이드를 다음 항목으로 이동
-    sld_LP.movenext();  // LP 슬라이드 이동
-  }
+        // 3-7. 슬라이드 이동: 다음 화면으로
+        sld_LP.setfocus(); // LP 슬라이드뷰에 포커스 설정
+        sld_LP.movenext();  // LP 슬라이드 이동
+    }
 }
 
 function time_txt_on_change(objInst, event_type)

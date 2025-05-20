@@ -91,95 +91,80 @@ function fn_setPanelWidth()
 
 function time_on_time(objInst)
 {
-    // 현재 time_txt 값 가져와서 숫자 부분만 추출 후 숫자로 변환
-    var currentTimeStr = this.time_txt.gettext(); // 예: "3초뒤 창 닫힘"
-    var currentTime = Number(currentTimeStr.match(/\d+/)[0]); // 숫자만 추출 후 변환
+    // 1. 현재 time_txt 값 가져와서 숫자 부분만 추출 후 숫자로 변환
+    var currentTimeStr = this.time_txt.gettext(); // "3초뒤 창 닫힘"과 같은 텍스트에서 숫자만 추출
+    var currentTime = Number(currentTimeStr.match(/\d+/)[0]); // 숫자만 추출하여 숫자로 변환
 
-    // 시간 1 감소 후 다시 설정
-    this.time_txt.settext((currentTime - 1) + "초뒤 창 닫힘");
+    // 2. 시간 1 감소 후 다시 설정
+    this.time_txt.settext((currentTime - 1) + "초뒤 창 닫힘");  // 감소된 시간을 텍스트에 설정
 
-    // 시간이 1 이하가 되면 타이머 중지 및 텍스트 비활성화
+    // 3. 시간이 1 이하가 되면 타이머 중지 및 텍스트 비활성화
     if (currentTime <= 1) {
-        // 타이머 중지 및 비활성화
+        // 3.1 타이머 중지 및 비활성화
         this.time_1.setinterval(0);    // 타이머 중지
         this.time_1.setenable(false);  // 타이머 비활성화
         this.time_txt.setenable(false);   // 텍스트 필드 비활성화
         this.time_txt.setvisible(false);  // 텍스트 숨김 처리
 
-        // 리스트뷰의 첫 번째 아이템 삭제
+        // 3.2 리스트뷰의 첫 번째 아이템 삭제
         let rowCount = this.DS_ORDER.getrowcount();
         if (rowCount > 0) {
             this.DS_ORDER.deleterow(0); // 첫 번째 행 삭제
         }
 
-        // UI 갱신 (페이지 수와 패널 너비 재설정)
+        // 3.3 UI 갱신 (페이지 수와 패널 너비 재설정)
         this.fn_setNumbercount();
 
-        // 리스트가 비어 있으면 다음 화면으로 이동
+        // 3.4 리스트가 비어 있으면 다음 화면으로 이동
         if (this.DS_ORDER.getrowcount() === 0) {
             let parentScr = this.screen.getparent();      // 현재 화면의 부모 화면 가져오기
             let sld = parentScr.getinstancebyname("SV_Template"); // 슬라이더 인스턴스 가져오기
-//            let sld_LP = parentScr.getinstancebyname("SV_Template_LP"); // LP 슬라이더 인스턴스 가져오기
 
-            // 다음 화면에서 time 객체 가져오기
-            let nNextIdx_2 = sld.getitemfocus() + 1;  // 다음 화면인덱스 계산오기
-//            let nNextIdx_2_LP = sld_LP.getitemfocus() + 1;  // 다음 화면인덱스 계산오기
-
+            // 3.5 다음 화면에서 time 객체 가져오기
+            let nNextIdx_2 = sld.getitemfocus() + 1;  // 다음 화면 인덱스 계산
             let oScrBiz = SYSUtil.fn_getBizScreen(this, nNextIdx_2);    
-//            let oScrBiz_LP = SYSUtil.fn_getBizScreen(this, nNextIdx_2_LP, true);  
 
-            // 타이머 객체가 유효한지 확인
+            // 3.6 타이머 객체가 유효한지 확인
             let objTime = oScrBiz.getmembers().time;
             objTime.setenable(true);  // 다음 화면의 타이머 활성화
-//            let objTime_LP = oScrBiz_LP.getmembers().time;
-//            objTime_LP.setenable(true);  // 다음 화면의 타이머 활성화
 
-            // 슬라이드 이동: 다음 화면으로
+            // 3.7 슬라이드 이동: 다음 화면으로
             sld.setfocus(); 
             sld.movenext();  // 슬라이드를 다음 항목으로 이동
-//            sld_LP.movenext();  // LP 슬라이드 이동
         } else {
-            // 리스트가 비어 있지 않으면 이전 화면으로 이동
+            // 3.8 리스트가 비어 있지 않으면 이전 화면으로 이동
             let parentScr = this.screen.getparent();      // 현재 화면의 부모 화면 가져오기
             let sld = parentScr.getinstancebyname("SV_Template"); // 슬라이더 인스턴스 가져오기
-//            let sld_LP = parentScr.getinstancebyname("SV_Template_LP"); // LP 슬라이더 인스턴스 가져오기
 
-            // 이전 화면에서 time 객체 가져오기
+            // 3.9 이전 화면에서 time 객체 가져오기
             let nPrevIdx_2 = sld.getitemfocus() - 1;  // 이전 화면 인덱스 계산
-//            let nPrevIdx_2_LP = sld_LP.getitemfocus() - 1;  // 이전 화면 인덱스 계산
+            let oScrBiz = SYSUtil.fn_getBizScreen(this, nPrevIdx_2);    
 
-            let oScrBiz = SYSUtil.fn_getBizScreen(this, nPrevIdx_2);    	// 10204007
-//            let oScrBiz_LP = SYSUtil.fn_getBizScreen(this, nPrevIdx_2_LP,true);    
-
-            // 타이머 객체가 유효한지 확인
+            // 3.10 타이머 객체가 유효한지 확인
             let objTime = oScrBiz.getmembers().time;
             objTime.setenable(true);  // 이전 화면의 타이머 활성화
 
-//            let objTime_LP = oScrBiz_LP.getmembers().time;
-//            objTime_LP.setenable(true);  // 이전 화면의 타이머 활성화
+            // 3.11 데이터셋 복제
+            oScrBiz.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false);  
 
-			//데이터셋 복제 
-			oScrBiz.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false);  
-//			oScrBiz_LP.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false); 
-			
-			let mScrBiz = oScrBiz.getmembers();
-			// 타이머와 텍스트 초기화
-			// 초기값 설정 (예: 30초)
-			mScrBiz.time.setenable(true);  // 타이머 활성화
-			
-            // 슬라이드 이동: 이전 화면으로
+            // 3.12 타이머와 텍스트 초기화
+            let mScrBiz = oScrBiz.getmembers();
+            mScrBiz.time.setenable(true);  // 타이머 활성화
+
+            // 3.13 슬라이드 이동: 이전 화면으로
             sld.setfocus(); 
             sld.moveprev();  // 슬라이드를 이전 항목으로 이동
-//            sld_LP.moveprev();  // LP 슬라이드 이동
         }
-		this.time_txt.settext("5초뒤 창 닫힘");  // 초기 텍스트로 설정
+
+        // 4. 타이머와 텍스트 초기화
+        this.time_txt.settext("5초뒤 창 닫힘");  // 초기 텍스트 설정
         this.time_1.setinterval(1000);  // 타이머를 1초 간격으로 설정
-//        this.time_1.setenable(true);  // 타이머 활성화
         this.time_txt.setenable(true); // 텍스트 필드 활성화
         this.time_txt.setvisible(true); // 텍스트 보이기
     }
 }
 
+//time_txt 필드 변경 시 DS_ORDER 데이터셋 갱신하는 함수
 function time_txt_on_change(objInst, event_type)
 {
 		// DS_ORDER 데이터셋 복제 후, 해당 데이터를 화면에 바인딩

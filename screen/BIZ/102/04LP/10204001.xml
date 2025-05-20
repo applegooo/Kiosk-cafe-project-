@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <map_list>
 	<map>
-		<screen version="2.0" scriptcode="java" title="[저]]무인카페_사용시작안내" directory="/BIZ/102/04LP/" screenid="10204001" last_update_date="2025-01-14 14:57:50" width="1080" width_type="0" height="1920" height_type="0" canvas_width="1081" canvas_height="1921" vertscrollbar_style="0" horzscrollbar_style="0" on_load="eventfunc:screen_on_load()" funclist="screen_on_load,btn_Start_on_mouseup,btn_Acc_on_mouseup"/>
+		<screen version="2.0" scriptcode="java" title="[저]]무인카페_사용시작안내" directory="/BIZ/102/04LP/" screenid="10204001" last_update_date="2025-01-24 10:14:12" width="1080" width_type="0" height="1920" height_type="0" canvas_width="1081" canvas_height="1921" vertscrollbar_style="0" horzscrollbar_style="0" on_load="eventfunc:screen_on_load()" funclist="screen_on_load,btn_Start_on_mouseup,btn_Acc_on_mouseup"/>
 		<tab_order order_option="0" order_info="883,57"/>
 		<panel control_id="883" semantic_tag="0" x="0" y="0" right="0" bottom="0" width="1080" height="1920" vertscrollbar_style="0" horzscrollbar_style="0" title_font="맑은 고딕,9,0,0,0,0">
 			<tab_order order_option="0" order_info="1,2,884"/>

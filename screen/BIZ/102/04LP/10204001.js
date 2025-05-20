@@ -7,11 +7,10 @@ function btn_Start_on_mouseup(objInst)
 {
 	let parentScr = this.screen.getparent();	
 	let sld = parentScr.getinstancebyname("SV_Template");
-	let sld_LP = parentScr.getinstancebyname("SV_Template_LP");
-	//sld.setzorder(0)	
+	let sld_LP = parentScr.getinstancebyname("SV_Template_LP");	
 	
-	sld_LP.setfocus();	
 	sld.movenext();
+	sld_LP.setfocus();	
 	sld_LP.movenext();	
 }
 

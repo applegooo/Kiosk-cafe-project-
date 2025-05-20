@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <map_list>
 	<map>
-		<screen version="2.0" scriptcode="java" title="무인카페_제조완료" directory="/BIZ/102/04/" screenid="10204011" last_update_date="2025-01-20 16:30:06" width="1080" width_type="0" height="1920" height_type="0" canvas_height="2120" funclist="time_on_time,btn_Call_on_mouseup,btn_Acc_on_mouseup"/>
+		<screen version="2.0" scriptcode="java" title="무인카페_제조완료" directory="/BIZ/102/04/" screenid="10204011" last_update_date="2025-01-24 10:13:09" width="1080" width_type="0" height="1920" height_type="0" canvas_height="2120" funclist="time_on_time,btn_Call_on_mouseup,btn_Acc_on_mouseup"/>
+		<xlinkdataset id="DS_MENU" desc="" columns="menuId:::&quot;AM&#x0A;CL&#x0A;CM&#x0A;BL&#x0A;SL&#x0A;CB&#x0A;CL&#x0A;CBL&#x0A;HL&#x0A;&quot;:;menuName:::&quot;아메리카노&#x0A;카페라떼&#x0A;카페모카&#x0A;바닐라라떼&#x0A;딸기라떼&#x0A;콜드브루&#x0A;초코라떼&#x0A;콜드브루라떼&#x0A;흑당라떼&#x0A;&quot;:;cost:::&quot;1500&#x0A;1500&#x0A;2500&#x0A;3000&#x0A;3000&#x0A;2500&#x0A;2500&#x0A;3500&#x0A;3500&#x0A;&quot;:;url:::&quot;/BIZ/102/04/drink_1.png&#x0A;/BIZ/102/04/drink_2.png&#x0A;/BIZ/102/04/drink_3.png&#x0A;/BIZ/102/04/drink_4.png&#x0A;/BIZ/102/04/drink_5.png&#x0A;/BIZ/102/04/drink_6.png&#x0A;/BIZ/102/04/drink_7.png&#x0A;/BIZ/102/04/drink_8.png&#x0A;/BIZ/102/04/drink_9.png&#x0A;&quot;:"/>
+		<xlinkdataset id="DS_ORDER" desc="" columns="menuName:&quot;메뉴명(ex: 아메리카노)&quot;:::;cost:&quot;옵션값이 포함된 가격(ex: 2100)&quot;:::;count:&quot;메뉴갯수(ex: 4)&quot;:::;total_cost:&quot;옵션값*메뉴갯수(cost*count)&quot;:::;url:&quot;이미지 경로&quot;:::;Tem:&quot;(Boolean) 차갑게/뜨겁게(false/true)&quot;:::;Size:&quot;(Number) 작은컵/중간컵/큰컵(0/1/2)&quot;:::;TemSize:&quot;ex: 차갑게/중간컵&quot;:::;menuNameTemSize:&quot;메뉴명(차갑게/중간컵)&quot;:::"/>
 		<panel control_id="0" semantic_tag="0" x="0" y="0" right="0" bottom="0" width="1080" height="1920" custom_class="PN_101_back" back_color="00F8F8F8" border="0" title_font="맑은 고딕,9,0,0,0,0">
 			<tab_order order_option="0" order_info="6,1233,7"/>
 			<panel control_id="7" semantic_tag="0" x="0" y="1805" right="0" bottom="0" width="1080" height="115" custom_class="PN_101_back" border="0" boxshadow_type="1" title_font="맑은 고딕,9,0,0,0,0">
