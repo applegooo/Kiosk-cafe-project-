@@ -30,7 +30,6 @@ function btn_Call_on_mouseup(objInst)
 
 function btn_Acc_on_mouseup(objInst)
 {
-	//let rowData = this.DS_ORDER
 	// 팝업 호출
 	this.screen.loadportletpopup("접근성(팝업)", "/BIZ/102/04/POP/102042", "발급", true, XFD_BORDER_NONE, 90, 483, 0, 0, false, true, true, rowData);
 }

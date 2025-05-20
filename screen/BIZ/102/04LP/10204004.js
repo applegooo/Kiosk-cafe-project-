@@ -1,21 +1,66 @@
-﻿function screen_on_load()
-{
-	
-}    
-
-function btn_Home_on_mouseup(objInst)
+﻿function btn_Home_on_mouseup(objInst)
 {
 	window.location.reload();	
 }
 
 function btn_Prev_on_mouseup(objInst)
 {
-	let parentScr = this.screen.getparent();
-	let sld = parentScr.getinstancebyname("SV_Template");
-	let sld_LP = parentScr.getinstancebyname("SV_Template_LP");
-	sld_LP.setfocus();
-	sld_LP.moveprev();
-	sld.moveprev();
+    // 1. 부모 화면 가져오기
+    let parentScr = this.screen.getparent();
+
+    // 2. 부모 화면에서 슬라이드뷰 인스턴스 가져오기
+    let sld = parentScr.getinstancebyname("SV_Template");
+    let sld_LP = parentScr.getinstancebyname("SV_Template_LP");
+
+    // 3. 현재 슬라이드뷰의 포커스 인덱스 가져오기
+    let nCurrentIdx = sld.getitemfocus();
+    let nCurrentIdx_LP = sld_LP.getitemfocus();
+
+    // 4. 이전 슬라이드뷰 인덱스 계산
+    let nPrevIdx = nCurrentIdx - 1;
+    let nPrevIdx_LP = nCurrentIdx_LP - 1;
+
+    // 5. 현재 화면의 총 수량과 총 금액 갱신
+    this.fn_setTotalText();
+
+    // 6. 이전 화면 인스턴스 가져오기
+    let oScrBiz = SYSUtil.fn_getBizScreen(this, nPrevIdx);
+    let oScrBiz_LP = SYSUtil.fn_getBizScreen(this, nPrevIdx_LP, true);
+
+    // 7. 현재 화면 데이터 가져오기
+    let currentDataset = this.DS_ORDER;
+    let currentTxtDown = this.txt_down.gettext();
+
+    // 8. 이전 화면 데이터셋에 복제
+    oScrBiz.getxdataset("DS_ORDER").clone(currentDataset, "", false);
+    oScrBiz_LP.getxdataset("DS_ORDER").clone(currentDataset, "", false);
+
+    // 9. 이전 화면의 추가 필드 동기화
+    let txtdown = oScrBiz.getmembers().txt_down;
+    let txtdown_LP = oScrBiz_LP.getmembers().txt_down;
+    txtdown.settext(currentTxtDown);
+    txtdown_LP.settext(currentTxtDown);
+
+    // 10. 이전 화면의 패널 및 리스트뷰 오브젝트 가져오기
+    let prevPanel_LP = oScrBiz_LP.getmembers().pnl_Menu;
+    let prevList_LP = oScrBiz_LP.getmembers().list_Menu;
+
+    // 11. 패널의 너비를 강제로 750으로 설정
+    prevPanel_LP.setwidth(750);  // 동일하게 설정
+
+    // 페이지 수에 맞는 패널의 총 너비 계산
+    let count = this.DS_ORDER.getrowcount();
+    let page_count = Math.floor((count - 1) / 3) + 1; // 총 페이지 수 계산
+    let totalPanelWidth = page_count * 750;  // 패널 너비는 750으로 고정
+
+    // 패널 및 리스트뷰의 너비 동기화
+    prevPanel_LP.setpanelwidth(totalPanelWidth);
+    prevList_LP.setwidth(totalPanelWidth);
+
+    // 12. 슬라이드뷰 이동
+    sld_LP.setfocus();
+    sld.moveprev();
+    sld_LP.moveprev();
 }
 
 function btn_Call_on_mouseup(objInst)
@@ -25,53 +70,54 @@ function btn_Call_on_mouseup(objInst)
 
 function btn_ord_on_mouseup(objInst)
 {
-//	 // 부모 화면 가져오기
+    // 1. 부모 화면 가져오기
     let parentScr = this.screen.getparent();
-    console.log("현재 부모 화면은 : " + (parentScr ? parentScr.getname() : "없음"));
-
-    // 부모 화면에서 슬라이드뷰 가져오기
-    let sld_LP = parentScr.getinstancebyname("SV_Template_LP");
-    let sld = parentScr.getinstancebyname("SV_Template");
-
-    // 현재 슬라이드뷰의 다음 인덱스 가져오기
-    let nNextIdx_LP = sld_LP.getitemfocus() + 1;
-    let nNextIdx = sld.getitemfocus() + 1;
-
-//    // 다음 화면 경로 추정하여 출력
-//    let nextScreenUrl = currentUrl.replace(/(\d{8})$/, (match, p1) => {
-//        let nextIndex = parseInt(p1) + 1;
-//        return nextIndex.toString().padStart(8, '0');  // 8자리로 패딩하여 다음 인덱스를 생성
-//    });
-//    console.log("다음 화면 경로는: " + nextScreenUrl);  // 다음 화면 경로 출력
-
-    // 10204004 화면에서 인스턴스 가져오기
-    let oScrBiz = SYSUtil.fn_getBizScreen(this, nNextIdx, false);
-    console.log("oScrBiz 멤버 확인: ", oScrBiz.getmembers()); // oScrBiz의 멤버 로그 출력
-
-    let oScrBiz_LP = SYSUtil.fn_getBizScreen(this, nNextIdx_LP, true);
-    console.log("oScrBiz 멤버 확인: ", oScrBiz_LP.getmembers()); 
-
-    // oScrBiz에서 필드 값 가져오기
-    let objTxt2 = oScrBiz.getmembers().fld_Pay_2;
-    let objTxt2_LP = oScrBiz_LP.getmembers().fld_Pay_2;
-
-    // 입력 값 가져오기
-    objTxt2.settext(this.fld_Pay_1.gettext());
-    objTxt2_LP.settext(this.fld_Pay_1.gettext());
-
-    // 슬라이드뷰 포커스 및 이동
-    sld_LP.setfocus();
-    sld_LP.movenext();
-    sld.movenext();
-
-	// 10204007 화면 인덱스 계산
-	let nNextNextIdx = sld.getitemfocus() + 2;
-	let oScrBizNext = SYSUtil.fn_getBizScreen(this, nNextNextIdx); // 10204007 화면에서 BizScreen 가져오기
-	oScrBizNext.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false); 
-	
-	let nNextNextIdx_LP = sld_LP.getitemfocus() + 2;
-	let oScrBizNext_LP = SYSUtil.fn_getBizScreen(this, nNextNextIdx_LP, true); // 10204007 화면에서 BizScreen 가져오기
-	oScrBizNext_LP.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false); 	
+    
+    // 2. 부모 화면에서 슬라이드뷰 가져오기
+    let sld = parentScr.getinstancebyname("SV_Template"); 
+    let sld_LP = parentScr.getinstancebyname("SV_Template_LP"); 
+    
+    // 3. 현재 슬라이드뷰의 인덱스 가져오기
+    let currentIdx = sld.getitemfocus();    
+    let currentIdx_LP = sld_LP.getitemfocus();    
+    
+    // 4. 총 슬라이드뷰의 아이템 개수 확인
+    let totalItems = sld.getitemcount();
+    let totalItems_LP = sld_LP.getitemcount();
+    
+    // 5. 현재 화면의 데이터 복제 실행
+    for (let i = currentIdx + 1; i < totalItems; i++) {
+        let oScrBiz = SYSUtil.fn_getBizScreen(this, i, false);
+        
+        // 5-1. i가 3일 때 fld_Pay_2 값 가져오고 fld_Pay_1 값 설정
+        if (i === 3) {
+            let objTxt2 = oScrBiz.getmembers().fld_Pay_2;
+            objTxt2.settext(this.fld_Pay_1.gettext()); // fld_Pay_1 값 설정
+        }
+        
+        // 5-2. 데이터셋 복제 및 디버깅용 출력
+        oScrBiz.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false);
+        SYSUtil.fn_showDataset(this.DS_ORDER);
+    }
+    
+    // 6. LP 화면에 대한 데이터 복제
+    for (let i = currentIdx_LP + 1; i < totalItems_LP; i++) {
+        let oScrBiz_LP = SYSUtil.fn_getBizScreen(this, i, true);
+        
+        // 6-1. i가 3일 때 fld_Pay_2 값 가져오고 fld_Pay_1 값 설정
+        if (i === 3) {
+            let objTxt2_LP = oScrBiz_LP.getmembers().fld_Pay_2;
+            objTxt2_LP.settext(this.fld_Pay_1.gettext()); // fld_Pay_1 값 설정
+        }
+        
+        // 6-2. 데이터셋 복제
+        oScrBiz_LP.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false);
+    }
+    
+    // 7. 슬라이드뷰 이동
+    sld_LP.setfocus();            // LP 슬라이드뷰 포커스 설정
+    sld.movenext();               // 기존 슬라이드뷰 다음 페이지로 이동
+    sld_LP.movenext();            // LP 슬라이드뷰 다음 페이지로 이동  
 }
 
 function btn_Acc_on_mouseup(objInst)
@@ -102,7 +148,7 @@ function btn_Next_on_mouseup(objInst)
 	
 	// 2. 리스트뷰 우측 메뉴 총 페이지 수 설정
 	let dataset_count = this.DS_ORDER.getrowcount();
-	let list_count = Math.floor((dataset_count-1)/4) + 1;
+	let list_count = Math.floor((dataset_count-1)/3) + 1;
 	
 	if (currentValue < list_count) {
 		currentValue += 1;
@@ -117,42 +163,23 @@ function btn_Next_on_mouseup(objInst)
 
 function btn_X_on_mouseup(objInst, index)
 {
-     // 1. DS_ORDER에서 해당 메뉴의 수량과 가격을 가져오기
+	// 1. DS_ORDER에서 해당 메뉴의 수량과 가격을 가져오기
     let menuName = this.DS_ORDER.getdatabyname(index, "menuName");
     let count = Number(this.DS_ORDER.getdatabyname(index, "count"));
     let menuRow = this.DS_MENU.findrowbyname(0, "menuName:=:\"" + menuName + "\":1:&");
     let cost = Number(this.DS_MENU.getdatabyname(menuRow, "cost"));
 
-    // 2. 총 수량(fld_Qua_1)에서 수량 차감
-    let totalQuantity = Number(this.screen.getinstancebyname("fld_Qua_1").gettext());
-    this.screen.getinstancebyname("fld_Qua_1").settext(Math.max(totalQuantity - count, 0));
+	// 삭제전 데이터 셋 정보
+	SYSUtil.fn_showDataset(this.DS_ORDER);
 
-    // 3. 총 금액(fld_Mon_1)에서 가격 차감
-    let totalAmount = Number(this.screen.getinstancebyname("fld_Mon_1").gettext());
-    this.screen.getinstancebyname("fld_Mon_1").settext(Math.max(totalAmount - (count * cost), 0));
-
-    // 4. 리스트뷰에서 해당 항목을 삭제 (UI에서만 삭제, 데이터셋은 유지)
+    // 2. 리스트뷰에서 해당 항목을 삭제 
     this.list_Menu.deleteitem(index);
 
-    // 5. 데이터셋에서 해당 행은 삭제하지 않고 유지 (UI에서만 삭제)
-    // this.DS_ORDER.deleterow(index); // 데이터셋 삭제는 하지 않음
+	// 삭제후 데이터 셋 정보
+	SYSUtil.fn_showDataset(this.DS_ORDER);
 
-    // 6. 총 수량과 총 금액을 다시 계산하여 화면에 반영
-    let totalQuantityUpdated = 0;
-    let totalAmountUpdated = 0;
-
-    for (let i = 0; i < this.DS_ORDER.getrowcount(); i++) {
-        let count = Number(this.DS_ORDER.getdatabyname(i, "count"));
-        let menuRow = this.DS_MENU.findrowbyname(0, "menuName:=:\"" + this.DS_ORDER.getdatabyname(i, "menuName") + "\":1:&");
-        let cost = Number(this.DS_MENU.getdatabyname(menuRow, "cost"));
-
-        totalQuantityUpdated += count;
-        totalAmountUpdated += count * cost;
-    }
-
-    // 7. 화면에 업데이트된 총 수량과 총 금액을 반영
-    this.screen.getinstancebyname("fld_Qua_1").settext(totalQuantityUpdated.toString());
-    this.screen.getinstancebyname("fld_Mon_1").settext(totalAmountUpdated.toString());
+    // 3. 총수량과 총금액을 다시 계산하여 화면에 반영 (fn_setTotalText 호출)
+    this.fn_setTotalText();  // 총수량과 총금액을 재계산하고 화면에 반영
 }
 
 function btn_Clo_on_mouseup(objInst)
@@ -258,7 +285,7 @@ function fn_setTotalText()
 	this.fld_Mon_1.settext(total_cost);  // 구매금액
 	
 	// 4. 리스트뷰 우측 메뉴 총 페이지 수 설정
-	let list_count = Math.floor((dataset_count-1)/4) + 1;
+	let list_count = Math.floor((dataset_count-1)/3) + 1;
 	this.txt_down.settext(list_count);
 	
 	this.fn_setPanelHeight();
@@ -266,21 +293,29 @@ function fn_setTotalText()
 
 function fn_setPanelHeight()
 {
-	let panel_height = this.pnl_Menu.getheight();
-	
-	let count = this.DS_ORDER.getrowcount();
-	let page_count = Math.floor((count-1)/4) + 1;	// 총 페이지 갯수
-	
-	this.pnl_Menu.setpanelheight(page_count*panel_height);
-	
-	let item_height = this.list_Menu.getitemheight(0);
-	
-	if(count > 4) {
-		this.list_Menu.setheight(count * item_height);
-	}
-	else {
-		this.list_Menu.setheight(654);
-	}
+    // 1. 패널의 현재 높이 가져오기
+    let panel_height = this.pnl_Menu.getheight();
+    
+    // 2. 주문 항목 수 확인
+    let count = this.DS_ORDER.getrowcount();
+    
+    // 3. 총 페이지 수 계산 (항목이 3개씩 표시되는 페이지 기준)
+    let page_count = Math.floor((count - 1) / 3) + 1;
+    
+    // 4. 패널의 전체 높이를 페이지 수에 맞게 설정
+    this.pnl_Menu.setpanelheight(page_count * panel_height);
+    
+    // 5. 항목의 높이를 가져와서 리스트 높이 설정
+    let item_height = this.list_Menu.getitemheight(0);
+    
+    // 6. 항목이 3개보다 많으면 항목 수에 맞춰 리스트 높이 설정
+    if(count > 3) {
+        this.list_Menu.setheight(count * item_height);
+    } 
+    // 7. 항목이 3개 이하일 경우, 고정 높이로 설정
+    else {
+        this.list_Menu.setheight(300);
+    }
 }
 
 function fld_Mon_1_on_change(objInst, event_type)
@@ -296,10 +331,16 @@ function fld_Mon_1_on_change(objInst, event_type)
     this.screen.getinstancebyname("fld_Pay_1").settext(paymentAmount.toString());
 
 
-    // 데이터셋에서 상품 수량(count) 가져오기
-    let itemCount = this.DS_ORDER.getrowcount();
+	// 1. 초기값 세팅
+	let total_count = 0;
 
-    // txt_1에 동적으로 텍스트 설정
-    let message = `선택하신 <font class="TX_104_Yellow" color = "#8A4813">${itemCount}개의 상품</font>을 확인하시고`;
-    this.screen.getinstancebyname("txt_1").settext(message);
+	// 2. 주문된 목록을 반복문 돌려 총수량과 총금액 계산 실행
+	let itemCount = this.DS_ORDER.getrowcount();
+	for(let i=0; i<itemCount; i++) {
+		let menu_count  = Number(this.DS_ORDER.getdatabyname(i, "count")); // 옵션 포함된 메뉴갯수		
+		total_count = total_count+menu_count; // 총 수량
+	}
+	
+	// 3. 총수량과 총금액 세팅
+	this.txt_1.settext(`선택하신 <font class="TX_104_Yellow" color="#8A4813">${total_count}개의 상품</font>을 확인하시고`); // 총 수량
 }

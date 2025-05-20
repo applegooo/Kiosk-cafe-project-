@@ -27,33 +27,35 @@ function btn_Acc_on_mouseup(objInst)
 
 function btn_Next_on_mouseup(objInst)
 {
-			
-	let parentScr = this.screen.getparent();	 
-	let sld = parentScr.getinstancebyname("SV_Template"); 
-	let sld_LP = parentScr.getinstancebyname("SV_Template_LP");
-	
-	let nNextIdx_2 = sld.getitemfocus() + 1 ;
-	let nNextIdx_2_LP = sld_LP.getitemfocus() + 1 ;
-	
-	let oScrBiz = SYSUtil.fn_getBizScreen(this, nNextIdx_2);    
-	let objTime  = oScrBiz.getmembers().time;   
-			
-	let oScrBizLP = SYSUtil.fn_getBizScreen(this, nNextIdx_2_LP);    
-	let objTimeLP  = oScrBizLP.getmembers().time;   
-	
-	
-//	oScrBiz.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false);  
-//	oScrBizLP.getxdataset("DS_ORDER").clone(this.DS_ORDER, "", false); 
-//
-//	
-	sld_LP.setfocus();	
-	sld.movenext();
-	sld_LP.movenext();
-	
-	let obj_10 = objTime.getenable(); 	
-	objTime.setenable(true);   
-	let obj_11 = objTimeLP.getenable();	
-	objTimeLP.setenable(true);		
+    // 1. 부모 화면 가져오기
+    let parentScr = this.screen.getparent(); 
+    
+    // 2. 부모 화면에서 슬라이드뷰 인스턴스 가져오기
+    let sld = parentScr.getinstancebyname("SV_Template"); 
+    let sld_LP = parentScr.getinstancebyname("SV_Template_LP");
+
+    // 3. 현재 슬라이드뷰의 포커스 인덱스 가져오기
+    let nNextIdx_2 = sld.getitemfocus() + 1;  // 다음 인덱스
+    let nNextIdx_2_LP = sld_LP.getitemfocus() + 1;  // 다음 인덱스 (LP)
+
+    // 4. 다음 화면 인스턴스 가져오기
+    let oScrBiz = SYSUtil.fn_getBizScreen(this, nNextIdx_2);
+    let objTime = oScrBiz.getmembers().time;  // 'time' 객체 가져오기
+
+    let oScrBizLP = SYSUtil.fn_getBizScreen(this, nNextIdx_2_LP, true);
+    let objTimeLP = oScrBizLP.getmembers().time;  // 'time' 객체 가져오기 (LP)
+
+    // 5. 슬라이드뷰 이동
+    sld_LP.setfocus();
+    sld.movenext();
+    sld_LP.movenext();
+
+    // 6. 'time' 객체의 enable 상태 설정
+    let obj_10 = objTime.getenable();  // 기존 enable 상태 저장
+    objTime.setenable(true);  // 'time' 객체 활성화
+
+    let obj_11 = objTimeLP.getenable();  // 기존 enable 상태 저장
+    objTimeLP.setenable(true);  // 'time' 객체 (LP) 활성화
 }
 
    

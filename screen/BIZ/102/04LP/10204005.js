@@ -13,6 +13,7 @@ function btn_Prev_on_mouseup(objInst)
 	let parentScr = this.screen.getparent();
 	let sld = parentScr.getinstancebyname("SV_Template");
 	let sld_LP = parentScr.getinstancebyname("SV_Template_LP");
+	
 	sld_LP.setfocus();
 	sld_LP.moveprev();
 	sld.moveprev();
@@ -27,8 +28,7 @@ function btn_Pay_on_mouseup(objInst)
 {
 	let parentScr = this.screen.getparent();	
 	let sld = parentScr.getinstancebyname("SV_Template");
-	let sld_LP = parentScr.getinstancebyname("SV_Template_LP");
-	//sld.setzorder(0)	
+	let sld_LP = parentScr.getinstancebyname("SV_Template_LP");	
 	
 	sld_LP.setfocus();	
 	sld.movenext();
