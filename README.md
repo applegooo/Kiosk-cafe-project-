@@ -6,9 +6,8 @@
 
 ## 🛠️ 사용 기술
 
-- **Frontend**: HTML, CSS, JavaScript  
+- **Frontend**: CSS, JavaScript  
 - **형상관리**: Git, GitHub, GitLab  
-- **기타**: Gitea
 
 ---
 
@@ -45,7 +44,7 @@
    - 녹음된 `.wav` 음성 파일 재생 기능 구현
 
 5. **버전 관리 및 기록**  
-   - Git, GitHub, GitLab, Gitea를 활용한 소스 코드 관리
+   - Git, GitHub, GitLab 활용한 소스 코드 관리
 
 ---
 
@@ -71,7 +70,7 @@
 
 ## 🙋‍♀️ 담당 역할
 
-- 고객용 키오스크 UI 퍼블리싱 (HTML, CSS)  
+- 고객용 키오스크 UI 퍼블리싱
 - 일반/저자세/고대비 모드 전환 기능 구현 (JavaScript, CSS)  
 - 사용자 흐름에 맞춘 페이지 연동 처리  
 - Git 기반 도구를 활용한 버전 관리
